@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CN Ingeniería — Consultoría Civil, Cálculo Estructural & Soluciones de Software</title>
+    <!-- Favicon Oficial CN_STRUCT_3D -->
+    <link rel="icon" type="image/jpeg" href="assets/cn_struct_3d_icon.jpg">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cn: {
+                            navy: '#0B2545',
+                            dark: '#0A0F1D',
+                            card: '#111827',
+                            cyan: '#00A8E8',
+                            blue: '#1D4ED8',
+                            orange: '#FF6B35',
+                            green: '#10B981',
+                            amber: '#F59E0B',
+                            slate: '#94A3B8'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glow-cyan {
+            box-shadow: 0 0 40px -10px rgba(0, 168, 232, 0.4);
+        }
+        .glow-blue {
+            box-shadow: 0 0 35px -10px rgba(29, 78, 216, 0.4);
+        }
+        .glow-orange {
+            box-shadow: 0 0 35px -10px rgba(255, 107, 53, 0.4);
+        }
+        .glow-green {
+            box-shadow: 0 0 35px -10px rgba(16, 185, 129, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-cn-dark text-slate-100 font-sans antialiased selection:bg-cn-cyan selection:text-cn-dark">
+
+    <!-- Navegación -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-cn-dark/90 backdrop-blur-md border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#inicio" class="flex items-center space-x-3 group">
+                <div class="w-11 h-11 rounded-xl overflow-hidden border border-cn-cyan/50 shadow-md group-hover:scale-105 transition-transform">
+                    <img src="assets/cn_struct_3d_icon.jpg" alt="Icono Oficial CN Ingeniería" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <span class="text-xl font-display font-extrabold tracking-tight text-white">CN <span class="text-cn-cyan">INGENIERÍA</span></span>
+                    <span class="block text-[10px] uppercase tracking-widest text-slate-400 font-mono -mt-1">Proyectos & Tecnología</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-7 text-sm font-medium text-slate-300">
+                <a href="#inicio" class="hover:text-cn-cyan transition-colors">Inicio</a>
+                <a href="#servicios-ingenieria" class="hover:text-cn-cyan transition-colors flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-blue-500"></span> Servicios de Ingeniería
+                </a>
+                <a href="#cn-struct" class="hover:text-cn-orange transition-colors flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-cn-orange"></span> CN_STRUCT_3D
+                </a>
+                <a href="#caja-stock" class="hover:text-cn-green transition-colors flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-cn-green"></span> Caja Stock
+                </a>
+                <a href="#nosotros" class="hover:text-cn-cyan transition-colors">El Equipo</a>
+            </nav>
+
+            <a href="#contacto" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-cn-cyan hover:bg-sky-400 text-cn-dark font-semibold text-sm transition-all duration-200 shadow-md hover:shadow-cyan-500/20">
+                Contactar Estudio
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Principal -->
+    <section id="inicio" class="relative pt-36 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+        <!-- Luces de Fondo -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[450px] bg-gradient-to-tr from-cn-cyan/15 via-blue-700/10 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-xs font-mono text-cn-cyan mb-8">
+                <span class="w-2 h-2 rounded-full bg-cn-cyan animate-pulse"></span>
+                Ingeniería Civil Aplicada • Desarrollo de Software Propio
+            </div>
+            
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight">
+                Cálculo, proyectos integrales y <span class="bg-gradient-to-r from-cn-cyan via-sky-400 to-blue-500 bg-clip-text text-transparent">software de ingeniería</span>.
+            </h1>
+            
+            <p class="mt-6 text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+                Somos un equipo de ingenieros civiles con más de 18 años de trayectoria en obras de envergadura, combinando el rigor del cálculo tradicional con el poder de la programación avanzada.
+            </p>
+
+            <!-- Selector de dos caminos -->
+            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#servicios-ingenieria" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-base shadow-lg glow-blue transition-all flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    Servicios de Ingeniería & Proyectos
+                </a>
+                <a href="#software-division" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-slate-900 border border-slate-700 hover:border-cn-cyan/50 text-slate-200 hover:text-white font-semibold text-base transition-all flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5 text-cn-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                    Nuestros Softwares (CN_STRUCT / Caja Stock)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- UNIDAD 1: SERVICIOS DE INGENIERÍA & CONSULTORÍA -->
+    <section id="servicios-ingenieria" class="py-24 border-t border-slate-800/80 bg-slate-950/40 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-950/40 border border-blue-500/30 text-xs font-mono text-blue-400 mb-3">
+                    División Consultoría & Obras
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-display font-bold text-white tracking-tight">
+                    Ingeniería Civil Integral
+                </h2>
+                <p class="mt-4 text-base sm:text-lg text-slate-400 leading-relaxed">
+                    Acompañamos a estudios de arquitectura, desarrolladores inmobiliarios y constructoras resolviendo el cálculo y las instalaciones de principio a fin, listos para obra.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Tarjeta 1: Cálculo Estructural -->
+                <div class="p-8 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-blue-500/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 mb-6 group-hover:scale-105 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white font-display">Cálculo Estructural</h3>
+                    <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+                        Dimensionado de estructuras sismorresistentes en hormigón armado y metálicas para edificios en altura, naves industriales y viviendas. Aplicación estricta de normas <strong>CIRSOC 201/301</strong> e <strong>INPRES</strong>.
+                    </p>
+                    <ul class="mt-4 space-y-2 text-xs font-mono text-slate-300">
+                        <li class="flex items-center gap-2">✓ Edificios y torres residenciales</li>
+                        <li class="flex items-center gap-2">✓ Naves y tinglados de acero</li>
+                        <li class="flex items-center gap-2">✓ Fundaciones y plateas especiales</li>
+                    </ul>
+                </div>
+
+                <!-- Tarjeta 2: Instalaciones Integrales -->
+                <div class="p-8 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-cyan-500/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-6 group-hover:scale-105 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white font-display">Instalaciones de Obra</h3>
+                    <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+                        Proyectos completos de ingeniería en instalaciones coordinadas entre sí para evitar interferencias en obra y sobrecostos por roturas.
+                    </p>
+                    <ul class="mt-4 space-y-2 text-xs font-mono text-slate-300">
+                        <li class="flex items-center gap-2">⚡ <strong>Eléctricas</strong>: Tableros, potencia e iluminación</li>
+                        <li class="flex items-center gap-2">💧 <strong>Sanitarias</strong>: Agua fría/caliente, desagües y bombeo</li>
+                        <li class="flex items-center gap-2">🔥 <strong>Gas</strong>: Redes según normativas distribuidoras</li>
+                    </ul>
+                </div>
+
+                <!-- Tarjeta 3: Obras de Gran Envergadura & Consultoría -->
+                <div class="p-8 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-amber-500/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-6 group-hover:scale-105 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white font-display">Obras Mayores & Peritajes</h3>
+                    <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+                        Consultoría especializada para proyectos de gran porte, obras hidráulicas, revisión independiente de cálculos de terceros y auditorías de patologías estructurales.
+                    </p>
+                    <ul class="mt-4 space-y-2 text-xs font-mono text-slate-300">
+                        <li class="flex items-center gap-2">✓ Trayectoria de 18 años en grandes obras</li>
+                        <li class="flex items-center gap-2">✓ Peritajes técnicos y diagnóstico</li>
+                        <li class="flex items-center gap-2">✓ Asistencia técnica a dirección de obra</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Banner "Proyecto Llave en Mano" -->
+            <div class="mt-12 p-6 rounded-2xl bg-gradient-to-r from-blue-900/30 to-slate-900 border border-blue-800/40 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                    <h4 class="text-lg font-bold text-white font-display">¿Tenés un proyecto de arquitectura y necesitás resolver toda la ingeniería?</h4>
+                    <p class="text-sm text-slate-300 mt-1">Entregamos planos ejecutivos en CAD/DXF, planillas de doblado de armaduras y memorias de cálculo para presentar en municipios y colegios.</p>
+                </div>
+                <a href="#contacto" class="shrink-0 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 font-semibold text-white text-sm transition-all shadow-md">
+                    Pedir Cotización de Proyecto
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- UNIDAD 2: DIVISIÓN SOFTWARE & TECH LAB -->
+    <div id="software-division" class="pt-16 pb-6 text-center border-t border-slate-800">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-xs font-mono text-cn-cyan">
+            División Software & Tech Lab
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-display font-bold text-white mt-3">Tecnología Creada por Ingenieros</h2>
+        <p class="text-slate-400 text-sm max-w-xl mx-auto mt-2">Nuestras propias herramientas digitales puestas al servicio de la profesión y los negocios.</p>
+    </div>
+
+    <!-- Módulo 2.1: CN_STRUCT_3D -->
+    <section id="cn-struct" class="py-16 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-950/40 border border-orange-500/30 text-xs font-mono text-orange-400">
+                        Software de Cálculo Estructural 3D
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <img src="assets/cn_struct_3d_icon.jpg" alt="Logo CN_STRUCT_3D" class="w-14 h-14 rounded-2xl border border-cn-cyan/40 shadow-lg glow-cyan">
+                        <div>
+                            <h2 class="text-3xl sm:text-4xl font-display font-bold text-white leading-tight">
+                                CN_STRUCT_3D
+                            </h2>
+                            <span class="text-xs font-mono text-cn-cyan">Suite de Cálculo Estructural CIRSOC</span>
+                        </div>
+                    </div>
+                    <p class="text-base text-slate-300 leading-relaxed">
+                        Motor matricial 3D diseñado para modelar, analizar y verificar pórticos de hormigón armado y perfiles de acero bajo la normativa argentina <strong class="text-white">CIRSOC</strong>.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 py-2">
+                        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+                            <div class="text-cn-orange font-bold text-sm font-mono">CIRSOC 201 & 301</div>
+                            <div class="text-xs text-slate-400 mt-1">Hormigón armado y perfiles laminados/conformados de acero.</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+                            <div class="text-cn-orange font-bold text-sm font-mono">Viento & Nieve</div>
+                            <div class="text-xs text-slate-400 mt-1">Generación de cargas CIRSOC 102 y CIRSOC 104 por localidad.</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+                            <div class="text-cn-orange font-bold text-sm font-mono">Bases Biaxiales</div>
+                            <div class="text-xs text-slate-400 mt-1">Fundaciones con momentos biaxiales y verificación del terreno.</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+                            <div class="text-cn-orange font-bold text-sm font-mono">Planos & Memorias</div>
+                            <div class="text-xs text-slate-400 mt-1">Exportación formal a DXF y memoria de cálculo detallada.</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 pt-2">
+                        <a href="#contacto" class="px-6 py-3 rounded-lg bg-cn-orange hover:bg-orange-600 font-semibold text-white text-sm transition-all shadow-md">
+                            Solicitar Demo Técnica
+                        </a>
+                        <span class="text-xs font-mono text-slate-400">Para calculistas y estudios</span>
+                    </div>
+                </div>
+
+                <!-- Preview Visual / Captura Real UI CN_STRUCT_3D -->
+                <div class="lg:col-span-6">
+                    <div class="relative rounded-2xl bg-slate-900 border border-slate-800 p-2.5 glow-orange shadow-2xl">
+                        <div class="flex items-center justify-between pb-2.5 px-3 border-b border-slate-800 text-xs font-mono text-slate-400">
+                            <div class="flex items-center space-x-2">
+                                <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+                                <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+                                <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
+                                <span class="ml-2 text-slate-200 font-semibold">CN_STRUCT_3D — Pórtico Espacial Hormigón 3 Plantas</span>
+                            </div>
+                            <span class="text-cn-cyan font-bold">Cómputo en Tiempo Real</span>
+                        </div>
+                        
+                        <div class="rounded-xl overflow-hidden mt-2.5 border border-slate-800 bg-black">
+                            <img src="assets/cn_struct_3d_demo.png" alt="Captura Real de CN_STRUCT_3D: Diagramas 3D y Cómputo de Hormigón y Acero" class="w-full h-auto object-cover hover:scale-[1.02] transition-transform duration-300">
+                        </div>
+
+                        <!-- Mini Badges de métricas reales mostradas en el software -->
+                        <div class="grid grid-cols-3 gap-2 mt-3 text-center font-mono text-[11px]">
+                            <div class="bg-slate-950/80 p-2 rounded-lg border border-slate-800">
+                                <span class="text-slate-400 block text-[9px]">HORMIGÓN TOTAL</span>
+                                <strong class="text-cn-cyan">22.65 m³</strong>
+                            </div>
+                            <div class="bg-slate-950/80 p-2 rounded-lg border border-slate-800">
+                                <span class="text-slate-400 block text-[9px]">ARMADURA ADN-420</span>
+                                <strong class="text-cn-green">1.647 kg</strong>
+                            </div>
+                            <div class="bg-slate-950/80 p-2 rounded-lg border border-slate-800">
+                                <span class="text-slate-400 block text-[9px]">CUANTÍA MEDIA</span>
+                                <strong class="text-cn-orange">72.7 kg/m³</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Módulo 2.2: Caja Stock -->
+    <section id="caja-stock" class="py-16 border-t border-slate-800/80 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Mockup Caja Stock -->
+                <div class="lg:col-span-6 order-2 lg:order-1">
+                    <div class="relative rounded-2xl bg-slate-900 border border-slate-800 p-3 glow-green">
+                        <div class="flex items-center justify-between pb-3 px-2 border-b border-slate-800 text-xs font-mono text-slate-400">
+                            <div class="flex items-center space-x-2">
+                                <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+                                <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+                                <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
+                                <span class="ml-2 text-slate-300 font-bold">Caja Stock — Control Operativo</span>
+                            </div>
+                            <span class="text-cn-green font-semibold">Caja Abierta</span>
+                        </div>
+                        
+                        <div class="h-72 bg-slate-950 rounded-xl mt-3 p-5 flex flex-col justify-between border border-slate-800/60 font-mono text-xs">
+                            <div class="grid grid-cols-3 gap-3">
+                                <div class="bg-slate-900 p-3 rounded-lg border border-slate-800">
+                                    <div class="text-slate-400 text-[10px]">VENTAS HOY</div>
+                                    <div class="text-base font-bold text-white mt-1">$482.500</div>
+                                </div>
+                                <div class="bg-slate-900 p-3 rounded-lg border border-slate-800">
+                                    <div class="text-slate-400 text-[10px]">EN STOCK</div>
+                                    <div class="text-base font-bold text-cn-green mt-1">1.240 un.</div>
+                                </div>
+                                <div class="bg-slate-900 p-3 rounded-lg border border-slate-800">
+                                    <div class="text-slate-400 text-[10px]">ALERTAS</div>
+                                    <div class="text-base font-bold text-amber-400 mt-1">3 ítems</div>
+                                </div>
+                            </div>
+
+                            <div class="space-y-1.5 bg-slate-900/60 p-3 rounded-xl border border-slate-800/70 text-[11px]">
+                                <div class="flex justify-between text-slate-300">
+                                    <span>Venta #1042</span>
+                                    <span class="text-cn-green font-bold">+$18.500</span>
+                                </div>
+                                <div class="flex justify-between text-slate-300">
+                                    <span>Factura Proveedor #890</span>
+                                    <span class="text-red-400 font-bold">-$94.000</span>
+                                </div>
+                            </div>
+
+                            <div class="text-center text-slate-500 text-[11px]">
+                                Arqueos de caja ciega, inventario y cuentas a pagar.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Descripción Caja Stock -->
+                <div class="lg:col-span-6 order-1 lg:order-2 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/40 border border-emerald-500/30 text-xs font-mono text-emerald-400">
+                        Gestión Comercial y Operativa
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-display font-bold text-white leading-tight">
+                        Caja Stock
+                    </h2>
+                    <p class="text-base text-slate-300 leading-relaxed">
+                        Control total de compras, existencias de inventario, caja diaria y cuentas de proveedores para pymes, distribuidores y comercios.
+                    </p>
+
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li class="flex items-center gap-2">✓ Arqueos y caja ciega para evitar diferencias de efectivo.</li>
+                        <li class="flex items-center gap-2">✓ Alertas de stock crítico y órdenes de reposición.</li>
+                        <li class="flex items-center gap-2">✓ Registro detallado de deudas y pagos a proveedores.</li>
+                    </ul>
+
+                    <div class="flex items-center gap-4 pt-2">
+                        <a href="#contacto" class="px-6 py-3 rounded-lg bg-cn-green hover:bg-emerald-600 font-semibold text-white text-sm transition-all shadow-md">
+                            Conocer Caja Stock
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Quienes Somos / Equipo -->
+    <section id="nosotros" class="py-24 border-t border-slate-800/80 bg-slate-950/30">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-mono text-cn-cyan uppercase tracking-widest">Liderazgo & Trayectoria</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-white mt-2">18 Años de Solvencia Técnica & Visión de Futuro</h2>
+                <p class="mt-4 text-slate-300 text-base leading-relaxed">
+                    Un equipo interdisciplinario que combina amplia experiencia en obras mayores de infraestructura civil, cálculo estructural riguroso y desarrollo de software propio de vanguardia.
+                </p>
+            </div>
+
+            <!-- Tarjeta Destacada del Fundador / Dirección Técnica -->
+            <div class="max-w-4xl mx-auto rounded-3xl bg-gradient-to-br from-slate-900 via-slate-900 to-cn-navy/40 border border-slate-800 p-8 sm:p-10 mb-16 shadow-2xl relative overflow-hidden">
+                <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-cn-cyan/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="flex flex-col sm:flex-row items-center gap-8 relative z-10">
+                    <!-- Foto Perfil -->
+                    <div class="relative shrink-0">
+                        <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-2xl overflow-hidden border-2 border-cn-cyan/50 shadow-xl glow-cyan relative group">
+                            <img src="assets/perfil_fundador.jpg" alt="Dirección Técnica - CN Ingeniería" class="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                        <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-cn-navy border border-cn-cyan/40 text-[10px] font-mono text-cn-cyan whitespace-nowrap shadow-md">
+                            18+ Años Experiencia
+                        </div>
+                    </div>
+
+                    <!-- Información y Perfil -->
+                    <div class="text-center sm:text-left space-y-3">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-950/50 border border-blue-500/30 text-xs font-mono text-cyan-400">
+                            Dirección Técnica & Fundador
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight">
+                            Ingeniería Civil & Cálculo Computacional
+                        </h3>
+                        <p class="text-sm font-mono text-cn-cyan">
+                            Especialista en Grandes Obras de Infraestructura, Estructuras Sismorresistentes & Algoritmos
+                        </p>
+                        <p class="text-sm text-slate-300 leading-relaxed pt-1">
+                            "Nuestra misión en CN Ingeniería es resolver los desafíos estructurales y de instalaciones más complejos con el rigor normativo más exigente, integrando al mismo tiempo la automatización y el software como multiplicadores de precisión y eficiencia en la construcción."
+                        </p>
+                        
+                        <div class="pt-2 flex flex-wrap justify-center sm:justify-start gap-2 text-xs font-mono">
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700">CIRSOC / INPRES</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700">Grandes Obras Civiles</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700">Desarrollo CN_STRUCT_3D</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tres Pilares Institucionales -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+                    <div class="text-cn-cyan font-bold text-2xl font-display">18+</div>
+                    <h4 class="text-white font-semibold mt-1">Años de Trayectoria</h4>
+                    <p class="text-xs text-slate-400 mt-2">Solvencia profesional respaldada por casi dos décadas en proyectos civiles y de infraestructura de gran complejidad.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+                    <div class="text-cn-orange font-bold text-2xl font-display">100%</div>
+                    <h4 class="text-white font-semibold mt-1">Rigor Normativo</h4>
+                    <p class="text-xs text-slate-400 mt-2">Cálculos respaldados en reglamentos vigentes (CIRSOC, INPRES, IRAM, ENARGAS) listos para visar y construir.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+                    <div class="text-cn-green font-bold text-2xl font-display">Algoritmos</div>
+                    <h4 class="text-white font-semibold mt-1">Software Propio</h4>
+                    <p class="text-xs text-slate-400 mt-2">Desarrollamos nuestras propias soluciones digitales para optimizar tiempos, consumos de materiales y gestión de recursos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario / Contacto -->
+    <section id="contacto" class="py-24 border-t border-slate-800/80 relative">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl sm:text-4xl font-display font-bold text-white">Comunicate con CN Ingeniería</h2>
+            <p class="mt-3 text-slate-400 text-base">Cotizá tu proyecto de cálculo e instalaciones o solicitá una demo de nuestros softwares.</p>
+
+            <form class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 text-left" onsubmit="event.preventDefault(); alert('¡Gracias por comunicarte con CN Ingeniería! Nos contactaremos a la brevedad.');">
+                <div>
+                    <label class="block text-xs font-mono text-slate-400 mb-2">NOMBRE COMPLETO</label>
+                    <input type="text" required placeholder="Ej: Arq. María Gómez / Ing. Carlos Pérez" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-cn-cyan">
+                </div>
+                <div>
+                    <label class="block text-xs font-mono text-slate-400 mb-2">EMAIL O TELÉFONO / WHATSAPP</label>
+                    <input type="text" required placeholder="+54 9 11 ..." class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-cn-cyan">
+                </div>
+                <div class="sm:col-span-2">
+                    <label class="block text-xs font-mono text-slate-400 mb-2">ÁREA DE INTERÉS</label>
+                    <select class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white focus:outline-none focus:border-cn-cyan">
+                        <option>Proyecto Integral de Ingeniería (Estructura + Instalaciones)</option>
+                        <option>Cálculo Estructural Exclusivo (CIRSOC / Hormigón / Acero)</option>
+                        <option>Proyecto de Instalaciones (Eléctricas, Sanitarias, Gas)</option>
+                        <option>Consultoría de Obras de Gran Envergadura / Peritaje</option>
+                        <option>Software CN_STRUCT_3D (Demo / Licencia)</option>
+                        <option>Software Caja Stock (Gestión Comercial)</option>
+                    </select>
+                </div>
+                <div class="sm:col-span-2">
+                    <label class="block text-xs font-mono text-slate-400 mb-2">DETALLE DEL PROYECTO O CONSULTA</label>
+                    <textarea rows="4" placeholder="Contanos sobre tu obra, tipología (edificio, nave, vivienda) o consulta técnica..." class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-cn-cyan"></textarea>
+                </div>
+                <div class="sm:col-span-2 mt-2">
+                    <button type="submit" class="w-full py-4 rounded-xl bg-cn-cyan hover:bg-sky-400 font-bold text-cn-dark text-base transition-all shadow-lg glow-cyan">
+                        Enviar Consulta a CN Ingeniería
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-900 bg-black text-center text-xs text-slate-500 font-mono">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                © 2026 CN INGENIERÍA. Soluciones Civiles, Cálculo Estructural & Software.
+            </div>
+            <div class="flex space-x-6 text-slate-400">
+                <span>Servicios de Ingeniería</span>
+                <span>•</span>
+                <span>CN_STRUCT_3D</span>
+                <span>•</span>
+                <span>Caja Stock</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

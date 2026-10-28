@@ -1,0 +1,12 @@
+# Material estratégico interno de marketing
+brand_identity/
+copywriting_campaigns/
+multimedia_prompts/
+web_design/
+
+# Sistema operativo y editores
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
