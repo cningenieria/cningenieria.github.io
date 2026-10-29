@@ -480,19 +480,22 @@
                 </button>
             </div>
 
-            <!-- Formulario Interactivo -->
-            <form id="contactForm" class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 text-left" onsubmit="enviarConsulta(event)">
+            <!-- Formulario Interactivo Directo (Sin necesidad de abrir app de correo) -->
+            <form id="contactForm" action="https://formspree.io/f/xzeevpkg" method="POST" class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 text-left" onsubmit="enviarConsulta(event)">
+                <!-- Configuración Formspree para cningenieria@outlook.com.ar -->
+                <input type="hidden" name="_subject" value="[Consulta Web] Nuevo mensaje en CN Ingeniería">
+
                 <div>
                     <label class="block text-xs font-mono text-slate-400 mb-2">NOMBRE COMPLETO *</label>
-                    <input type="text" id="formNombre" required placeholder="Ej: Arq. María Gómez / Ing. Carlos Pérez" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-cn-cyan">
+                    <input type="text" id="formNombre" name="nombre" required placeholder="Ej: Arq. María Gómez / Ing. Carlos Pérez" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-cn-cyan">
                 </div>
                 <div>
                     <label class="block text-xs font-mono text-slate-400 mb-2">EMAIL O TELÉFONO / WHATSAPP *</label>
-                    <input type="text" id="formContacto" required placeholder="+54 9 11 ... o tu email" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-cn-cyan">
+                    <input type="text" id="formContacto" name="contacto" required placeholder="+54 9 11 ... o tu email" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-cn-cyan">
                 </div>
                 <div class="sm:col-span-2">
                     <label class="block text-xs font-mono text-slate-400 mb-2">ÁREA DE INTERÉS *</label>
-                    <select id="formArea" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white focus:outline-none focus:border-cn-cyan">
+                    <select id="formArea" name="area" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white focus:outline-none focus:border-cn-cyan">
                         <option value="Proyecto Integral de Ingeniería">Proyecto Integral de Ingeniería (Estructura + Instalaciones)</option>
                         <option value="Cálculo Estructural CIRSOC">Cálculo Estructural Exclusivo (CIRSOC / Hormigón / Acero)</option>
                         <option value="Proyecto de Instalaciones">Proyecto de Instalaciones (Eléctricas, Sanitarias, Gas)</option>
@@ -503,42 +506,96 @@
                 </div>
                 <div class="sm:col-span-2">
                     <label class="block text-xs font-mono text-slate-400 mb-2">DETALLE DEL PROYECTO O CONSULTA</label>
-                    <textarea id="formMensaje" rows="4" placeholder="Contanos sobre tu obra, tipología (edificio, nave, vivienda) o consulta técnica..." class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-cn-cyan"></textarea>
+                    <textarea id="formMensaje" name="mensaje" rows="4" placeholder="Contanos sobre tu obra, tipología (edificio, nave, vivienda) o consulta técnica..." class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-cn-cyan"></textarea>
                 </div>
+
+                <!-- Mensaje de Estado / Notificación en Pantalla -->
+                <div id="formStatus" class="hidden sm:col-span-2 p-4 rounded-xl border text-sm font-mono text-center transition-all"></div>
+
                 <div class="sm:col-span-2 mt-2">
-                    <button type="submit" class="w-full py-4 rounded-xl bg-cn-cyan hover:bg-sky-400 font-bold text-cn-dark text-base transition-all shadow-lg glow-cyan flex items-center justify-center gap-2">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                        Enviar Consulta a cningenieria@outlook.com.ar
+                    <button type="submit" id="btnSubmit" class="w-full py-4 rounded-xl bg-cn-cyan hover:bg-sky-400 font-bold text-cn-dark text-base transition-all shadow-lg glow-cyan flex items-center justify-center gap-2 cursor-pointer">
+                        <svg id="btnIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                        <span id="btnText">Enviar Mensaje a CN Ingeniería</span>
                     </button>
                     <p class="text-[11px] font-mono text-slate-500 text-center mt-2">
-                        Al hacer clic se redactará automáticamente tu mensaje directo hacia nuestro correo institucional.
+                        Llega directamente a nuestra casilla <span class="text-slate-400">cningenieria@outlook.com.ar</span> sin salir de la página.
                     </p>
                 </div>
             </form>
         </div>
     </section>
 
-    <!-- Script de Envío de Formulario Seguro -->
+    <!-- Script de Envío Asíncrono Directo (Formspree Oficial) -->
     <script>
-        function enviarConsulta(e) {
+        // Endpoint Oficial Formspree vinculado a cningenieria@outlook.com.ar
+        const FORMSPREE_ENDPOINT = "https://formspree.io/f/xzeevpkg"; 
+
+        async function enviarConsulta(e) {
             e.preventDefault();
-            const nombre = document.getElementById('formNombre').value;
-            const contacto = document.getElementById('formContacto').value;
+            const btn = document.getElementById('btnSubmit');
+            const btnText = document.getElementById('btnText');
+            const statusDiv = document.getElementById('formStatus');
+
+            const nombre = document.getElementById('formNombre').value.trim();
+            const contacto = document.getElementById('formContacto').value.trim();
             const area = document.getElementById('formArea').value;
-            const mensaje = document.getElementById('formMensaje').value;
+            const mensaje = document.getElementById('formMensaje').value.trim();
 
-            const asunto = encodeURIComponent(`[Consulta Web CN Ingeniería] - ${area} - ${nombre}`);
-            const cuerpo = encodeURIComponent(
-                `Hola equipo de CN Ingeniería,\n\n` +
-                `Mi nombre es: ${nombre}\n` +
-                `Contacto (Email/Tel/WhatsApp): ${contacto}\n` +
-                `Área de Interés: ${area}\n\n` +
-                `Detalle del Proyecto o Consulta:\n${mensaje}\n\n` +
-                `Enviado desde el sitio web oficial de CN Ingeniería.`
-            );
+            // Estado: Cargando
+            btn.disabled = true;
+            btnText.innerText = 'Enviando consulta...';
+            statusDiv.className = 'hidden';
 
-            // Redirige al cliente de correo predeterminado del usuario con todo listo
-            window.location.href = `mailto:cningenieria@outlook.com.ar?subject=${asunto}&body=${cuerpo}`;
+            const payload = {
+                nombre: nombre,
+                contacto: contacto,
+                area: area,
+                mensaje: mensaje,
+                _replyto: contacto.includes('@') ? contacto : 'cningenieria@outlook.com.ar'
+            };
+
+            try {
+                const response = await fetch(FORMSPREE_ENDPOINT, {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    // Éxito: Mensaje visual en verde
+                    statusDiv.className = 'sm:col-span-2 p-4 rounded-xl bg-emerald-950/80 border border-cn-green text-cn-green text-sm text-center font-mono';
+                    statusDiv.innerHTML = `✅ <strong>¡Consulta enviada con éxito!</strong><br>Gracias ${nombre}, recibimos tu mensaje sobre "${area}". Nos contactaremos a la brevedad.`;
+                    document.getElementById('contactForm').reset();
+                    btnText.innerText = 'Mensaje Enviado ✓';
+                    setTimeout(() => {
+                        btn.disabled = false;
+                        btnText.innerText = 'Enviar Otro Mensaje';
+                    }, 4000);
+                } else {
+                    throw new Error('Servicio en proceso de vinculación');
+                }
+            } catch (err) {
+                // Fallback elegante si aún no activó el endpoint de Formspree:
+                // Le abre directamente su correo con todo listo para que no se pierda el mensaje
+                statusDiv.className = 'sm:col-span-2 p-4 rounded-xl bg-blue-950/70 border border-cn-cyan/40 text-slate-200 text-xs text-center font-mono';
+                statusDiv.innerHTML = `ℹ️ <strong>Abriendo envío directo a cningenieria@outlook.com.ar...</strong><br>También puedes escribirnos a <a href="mailto:cningenieria@outlook.com.ar" class="text-cn-cyan underline">cningenieria@outlook.com.ar</a>`;
+                
+                const asunto = encodeURIComponent(`[Consulta Web CN Ingeniería] - ${area} - ${nombre}`);
+                const cuerpo = encodeURIComponent(
+                    `Hola equipo de CN Ingeniería,\n\n` +
+                    `Mi nombre es: ${nombre}\n` +
+                    `Contacto (Email/WhatsApp): ${contacto}\n` +
+                    `Área de Interés: ${area}\n\n` +
+                    `Detalle del Proyecto o Consulta:\n${mensaje}\n\n` +
+                    `Enviado desde el sitio web de CN Ingeniería.`
+                );
+                window.location.href = `mailto:cningenieria@outlook.com.ar?subject=${asunto}&body=${cuerpo}`;
+                btn.disabled = false;
+                btnText.innerText = 'Enviar Mensaje a CN Ingeniería';
+            }
         }
     </script>
 
