@@ -153,7 +153,7 @@
                 </a>
                 <a href="#cn-presupuestos" class="px-3.5 py-1.5 rounded-full hover:text-amber-400 hover:bg-amber-500/[0.08] transition-all flex items-center gap-2 font-mono">
                     <span class="w-1.5 h-1.5 rounded-full bg-amber-400 shadow-[0_0_8px_#f59e0b]"></span>
-                    CN Presupuestos
+                    CN_Presupuestos
                 </a>
                 <a href="#caja-stock" class="px-3.5 py-1.5 rounded-full hover:text-cn-green hover:bg-emerald-500/[0.08] transition-all flex items-center gap-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-cn-green shadow-[0_0_8px_#10b981]"></span>
@@ -187,7 +187,7 @@
                 <span class="w-2 h-2 rounded-full bg-cn-orange"></span> CN_STRUCT_3D
             </a>
             <a href="#cn-presupuestos" onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="flex items-center gap-2 py-2 text-slate-300 hover:text-amber-400 font-mono transition-colors">
-                <span class="w-2 h-2 rounded-full bg-amber-400"></span> CN Presupuestos
+                <span class="w-2 h-2 rounded-full bg-amber-400"></span> CN_Presupuestos
             </a>
             <a href="#caja-stock" onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="flex items-center gap-2 py-2 text-slate-300 hover:text-cn-green transition-colors">
                 <span class="w-2 h-2 rounded-full bg-cn-green"></span> Caja Stock
@@ -238,7 +238,7 @@
                 </a>
                 <a href="#software-division" class="w-full sm:w-auto px-7 py-4 rounded-xl surface-card border border-white/10 hover:border-cn-cyan/50 text-slate-200 hover:text-white font-semibold text-sm sm:text-base transition-all duration-200 hover:-translate-y-0.5 flex items-center justify-center gap-2.5 group">
                     <i data-lucide="terminal" class="w-5 h-5 text-cn-cyan group-hover:rotate-6 transition-transform"></i>
-                    <span>Nuestros Softwares (CN_STRUCT / CN Presupuestos / Caja Stock)</span>
+                    <span>Nuestros Softwares (CN_STRUCT / CN_Presupuestos / Caja Stock)</span>
                 </a>
             </div>
 
@@ -584,14 +584,14 @@
                             </div>
                         </div>
 
-                        <!-- Conexión Directa con CN Presupuestos -->
+                        <!-- Conexión Directa con CN_Presupuestos -->
                         <div class="mt-3 pt-2.5 border-t border-white/[0.08] flex items-center justify-between text-[11px] font-mono text-slate-400">
                             <span class="flex items-center gap-1.5 text-amber-400">
                                 <i data-lucide="link" class="w-3.5 h-3.5"></i>
-                                Integración nativa con CN Presupuestos
+                                Integración nativa con CN_Presupuestos
                             </span>
                             <a href="#cn-presupuestos" class="text-slate-300 hover:text-amber-400 flex items-center gap-1 transition-colors">
-                                <span>Calcular Presupuesto APU</span>
+                                <span>Ver Cómputo & APU</span>
                                 <i data-lucide="arrow-down" class="w-3 h-3"></i>
                             </a>
                         </div>
@@ -602,16 +602,16 @@
         </div>
     </section>
 
-    <!-- Módulo 2.2: CN Presupuestos -->
+    <!-- Módulo 2.2: CN_Presupuestos -->
     <section id="cn-presupuestos" class="py-16 md:py-24 border-t border-white/[0.06] relative overflow-hidden">
         <!-- Resplandor ambiental ámbar/dorado -->
         <div class="absolute top-1/2 left-10 -translate-y-1/2 w-[520px] h-[520px] bg-amber-500/10 rounded-full blur-[150px] pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-10 items-center">
                 
-                <!-- Columna Izquierda: Información de Producto CN Presupuestos -->
-                <div class="lg:col-span-5 space-y-6">
+                <!-- Columna Izquierda: Información de Producto CN_Presupuestos -->
+                <div class="lg:col-span-5 space-y-5">
                     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-950/60 border border-amber-500/30 text-xs font-mono text-amber-400">
                         <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
                         <span>Cómputo Métrico & Presupuestación de Obras</span>
@@ -625,313 +625,240 @@
                         <div>
                             <div class="flex items-center gap-2.5">
                                 <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight">
-                                    CN Presupuestos
+                                    CN_Presupuestos
                                 </h2>
-                                <span class="px-2 py-0.5 rounded bg-amber-500/15 border border-amber-500/30 text-[10px] font-mono text-amber-400 font-semibold">NUEVO</span>
+                                <span class="px-2 py-0.5 rounded bg-amber-500/15 border border-amber-500/30 text-[10px] font-mono text-amber-400 font-semibold">v2.4 PRO</span>
                             </div>
-                            <span class="text-xs font-mono text-amber-400/90 block mt-0.5">Base Oficial AyC • UOCRA • CIRSOC</span>
+                            <span class="text-xs font-mono text-amber-400/90 block mt-0.5">Cómputo Métrico Paramétrico • Análisis APU • Sync CIRSOC</span>
                         </div>
                     </div>
 
-                    <p class="text-base text-slate-300 leading-relaxed">
-                        El puente definitivo entre el cálculo estructural y la economía de obra. Diseñada para ingenieros civiles, arquitectos y constructoras: computa desde un baño o vivienda unifamiliar hasta edificios en altura y naves industriales con precisión paramétrica.
+                    <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+                        El puente definitivo entre el modelo de cálculo y la gestión de obra. Diseñada para ingenieros civiles, calculistas y constructoras: computa desde viviendas unifamiliares hasta edificios en altura y estructuras industriales sin discrepancias ni traspasos manuales.
                     </p>
 
                     <!-- Matriz de Especificaciones 2x2 -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
-                        <div class="p-4 rounded-xl surface-card border border-white/[0.07] hover:border-amber-400/40 transition-colors">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                        <div class="p-3.5 rounded-xl surface-card border border-white/[0.07] hover:border-amber-400/40 transition-colors">
                             <div class="flex items-center gap-2 text-amber-400 font-bold text-xs font-mono">
                                 <i data-lucide="link-2" class="w-4 h-4"></i>
                                 <span>Sync con CN_STRUCT_3D</span>
                             </div>
-                            <div class="text-xs text-slate-400 mt-1.5 leading-relaxed">Importa volúmenes de H°A° (m³) y cuantías de acero CIRSOC (kg) directamente del modelo estructural.</div>
+                            <div class="text-xs text-slate-400 mt-1.5 leading-relaxed">Importa volúmenes de H°A° (m³) y armaduras de refuerzo CIRSOC 201/301 directamente del pórtico 3D.</div>
                         </div>
-                        <div class="p-4 rounded-xl surface-card border border-white/[0.07] hover:border-amber-400/40 transition-colors">
+                        <div class="p-3.5 rounded-xl surface-card border border-white/[0.07] hover:border-amber-400/40 transition-colors">
                             <div class="flex items-center gap-2 text-amber-400 font-bold text-xs font-mono">
-                                <i data-lucide="book-open-check" class="w-4 h-4"></i>
-                                <span>Revista AyC & UOCRA</span>
+                                <i data-lucide="layers" class="w-4 h-4"></i>
+                                <span>Matrices APU Oficiales</span>
                             </div>
-                            <div class="text-xs text-slate-400 mt-1.5 leading-relaxed">Base de datos de más de 450 ítems con APU oficial (Materiales + Mano de Obra CCT 76/75).</div>
+                            <div class="text-xs text-slate-400 mt-1.5 leading-relaxed">Análisis de Precios Unitarios desglosado en Materiales, Mano de Obra reglamentaria y Equipos.</div>
                         </div>
-                        <div class="p-4 rounded-xl surface-card border border-white/[0.07] hover:border-amber-400/40 transition-colors">
+                        <div class="p-3.5 rounded-xl surface-card border border-white/[0.07] hover:border-amber-400/40 transition-colors">
                             <div class="flex items-center gap-2 text-amber-400 font-bold text-xs font-mono">
                                 <i data-lucide="truck" class="w-4 h-4"></i>
                                 <span>Insumos para Corralón</span>
                             </div>
-                            <div class="text-xs text-slate-400 mt-1.5 leading-relaxed">Explosión de compras (bolsas de cemento, cal, arena, hierros por calibre y ladrillos con desperdicio).</div>
+                            <div class="text-xs text-slate-400 mt-1.5 leading-relaxed">Explosión física de compras (bolsas de cemento, cal, áridos, hierros por calibre y mampostería).</div>
                         </div>
-                        <div class="p-4 rounded-xl surface-card border border-white/[0.07] hover:border-amber-400/40 transition-colors">
+                        <div class="p-3.5 rounded-xl surface-card border border-white/[0.07] hover:border-amber-400/40 transition-colors">
                             <div class="flex items-center gap-2 text-amber-400 font-bold text-xs font-mono">
-                                <i data-lucide="coins" class="w-4 h-4"></i>
-                                <span>Costo m² & Moneda Dual</span>
+                                <i data-lucide="file-check-2" class="w-4 h-4"></i>
+                                <span>Pliegos & Licitaciones</span>
                             </div>
-                            <div class="text-xs text-slate-400 mt-1.5 leading-relaxed">Presupuestación en ARS y USD con ajuste inflacionario, GG & Beneficio (25%) y Honorarios (9.27%).</div>
+                            <div class="text-xs text-slate-400 mt-1.5 leading-relaxed">Reportes ejecutivos formales con desglose de ítems, rubros y cómputo métrico imprimible.</div>
                         </div>
                     </div>
 
-                    <div class="flex flex-wrap items-center gap-4 pt-3">
-                        <a href="#contacto" onclick="document.getElementById('formArea').value='Software CN Presupuestos (Cómputo & Presupuestos de Obra)';" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 font-semibold text-slate-950 text-sm transition-all shadow-lg glow-amber hover:-translate-y-0.5">
-                            <span>Solicitar CN Presupuestos</span>
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <a href="#contacto" onclick="document.getElementById('formArea').value='Software CN_Presupuestos (Cómputo & Presupuestos de Obra)';" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 font-semibold text-slate-950 text-sm transition-all shadow-lg glow-amber hover:-translate-y-0.5">
+                            <span>Solicitar CN_Presupuestos</span>
                             <i data-lucide="arrow-up-right" class="w-4 h-4 stroke-[2.2]"></i>
                         </a>
                         <span class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400">
                             <i data-lucide="shield-check" class="w-3.5 h-3.5 text-amber-400"></i>
-                            Reportes ejecutivos imprimibles
+                            Cómputo físico verificado
                         </span>
                     </div>
                 </div>
 
-                <!-- Columna Derecha: Dashboard y Gráfico Marquetinero Interactivo de CN Presupuestos -->
+                <!-- Columna Derecha: Dashboard Compacto de Cómputo Físico & Estructura Porcentual -->
                 <div class="lg:col-span-7">
-                    <div class="relative rounded-2xl surface-panel border border-white/10 p-3 sm:p-5 glow-amber">
+                    <div class="relative rounded-2xl surface-panel border border-white/10 p-3 sm:p-4 glow-amber">
                         
                         <!-- Barra de Ventana Estilo Software Profesional -->
-                        <div class="flex flex-wrap items-center justify-between gap-3 pb-3 px-2 border-b border-white/[0.08] text-xs font-mono text-slate-400">
+                        <div class="flex flex-wrap items-center justify-between gap-2 pb-3 px-2 border-b border-white/[0.08] text-xs font-mono text-slate-400">
                             <div class="flex items-center space-x-2">
                                 <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
                                 <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
                                 <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
-                                <span class="ml-2 text-slate-200 font-bold truncate">CN Presupuestos • Cómputo Métrico & APU</span>
+                                <span class="ml-2 text-slate-200 font-bold truncate">CN_Presupuestos • Cómputo Métrico Físico & APU</span>
                             </div>
-                            <div class="flex items-center gap-2">
-                                <span class="hidden sm:inline-block text-[11px] text-slate-400">Moneda:</span>
-                                <div class="inline-flex p-0.5 rounded-lg bg-slate-900 border border-white/10 text-[11px] font-mono">
-                                    <button type="button" id="btnMonedaArs" onclick="setPresupuestoMoneda('ARS')" class="px-2 py-0.5 rounded-md bg-amber-500 text-slate-950 font-bold transition-all">ARS $</button>
-                                    <button type="button" id="btnMonedaUsd" onclick="setPresupuestoMoneda('USD')" class="px-2 py-0.5 rounded-md text-slate-400 hover:text-white transition-all">USD $</button>
-                                </div>
-                                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-mono">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
-                                    En Vivo
-                                </span>
-                            </div>
+                            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-mono">
+                                <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+                                Simulación Dinámica
+                            </span>
                         </div>
 
-                        <!-- Selector de Plantillas / Prototipos Reales de Obra -->
-                        <div class="mt-3.5 bg-slate-950/70 p-2.5 rounded-xl border border-white/[0.06]">
-                            <div class="text-[10px] uppercase font-mono tracking-wider text-slate-400 mb-2 flex items-center justify-between">
-                                <span class="flex items-center gap-1.5"><i data-lucide="layers" class="w-3 h-3 text-amber-400"></i> Seleccionar Tipología de Obra:</span>
-                                <span class="text-amber-400/80 font-mono text-[10px]">Actualización en tiempo real</span>
+                        <!-- Selector de 3 Tipologías de Obra -->
+                        <div class="mt-3 bg-slate-950/70 p-2 rounded-xl border border-white/[0.06]">
+                            <div class="text-[10px] uppercase font-mono tracking-wider text-slate-400 mb-1.5 flex items-center justify-between">
+                                <span class="flex items-center gap-1.5"><i data-lucide="box" class="w-3 h-3 text-amber-400"></i> Tipología de Proyecto:</span>
+                                <span class="text-amber-400/80 font-mono text-[10px]">Cálculo paramétrico</span>
                             </div>
-                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                                <button type="button" id="tabPreset-ayc150" onclick="selectPresupuestoPreset('ayc150')" class="preset-btn active px-2.5 py-2 rounded-lg text-left text-xs font-mono transition-all border border-amber-500/60 bg-amber-500/15 text-white shadow-sm">
-                                    <div class="font-bold flex items-center gap-1">🏡 Casa AyC</div>
-                                    <div class="text-[10px] text-amber-300/80">150 m² • Estándar</div>
+                            <div class="grid grid-cols-3 gap-2">
+                                <button type="button" id="tabPreset-vivienda150" onclick="selectPresupuestoPreset('vivienda150')" class="preset-btn active px-2 py-1.5 rounded-lg text-left text-xs font-mono transition-all border border-amber-500/60 bg-amber-500/15 text-white shadow-sm">
+                                    <div class="font-bold flex items-center gap-1">🏡 Vivienda</div>
+                                    <div class="text-[10px] text-amber-300/80">150 m² • Unifamiliar</div>
                                 </button>
-                                <button type="button" id="tabPreset-cnstruct" onclick="selectPresupuestoPreset('cnstruct')" class="preset-btn px-2.5 py-2 rounded-lg text-left text-xs font-mono transition-all border border-white/5 bg-slate-900/80 text-slate-300 hover:border-amber-400/40">
+                                <button type="button" id="tabPreset-cnstruct" onclick="selectPresupuestoPreset('cnstruct')" class="preset-btn px-2 py-1.5 rounded-lg text-left text-xs font-mono transition-all border border-white/5 bg-slate-900/80 text-slate-300 hover:border-amber-400/40">
                                     <div class="font-bold flex items-center gap-1">🏗️ Pórtico 3D</div>
-                                    <div class="text-[10px] text-slate-400">320 m² • H°A° + Acero</div>
+                                    <div class="text-[10px] text-slate-400">320 m² • H°A° CIRSOC</div>
                                 </button>
-                                <button type="button" id="tabPreset-banio" onclick="selectPresupuestoPreset('banio')" class="preset-btn px-2.5 py-2 rounded-lg text-left text-xs font-mono transition-all border border-white/5 bg-slate-900/80 text-slate-300 hover:border-amber-400/40">
-                                    <div class="font-bold flex items-center gap-1">🚿 Baño & Cocina</div>
-                                    <div class="text-[10px] text-slate-400">25 m² • Remodelación</div>
-                                </button>
-                                <button type="button" id="tabPreset-tinglado" onclick="selectPresupuestoPreset('tinglado')" class="preset-btn px-2.5 py-2 rounded-lg text-left text-xs font-mono transition-all border border-white/5 bg-slate-900/80 text-slate-300 hover:border-amber-400/40">
+                                <button type="button" id="tabPreset-tinglado" onclick="selectPresupuestoPreset('tinglado')" class="preset-btn px-2 py-1.5 rounded-lg text-left text-xs font-mono transition-all border border-white/5 bg-slate-900/80 text-slate-300 hover:border-amber-400/40">
                                     <div class="font-bold flex items-center gap-1">🏭 Nave / Galpón</div>
                                     <div class="text-[10px] text-slate-400">300 m² • Metálica</div>
                                 </button>
                             </div>
                         </div>
 
-                        <!-- KPIs Principales en Vivo -->
-                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-3.5 font-mono">
-                            <div class="bg-slate-950/80 p-3 rounded-xl border border-white/[0.07]">
+                        <!-- KPIs de Cómputo Métrico Físico Inmutable -->
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 mt-3 font-mono">
+                            <div class="bg-slate-950/80 p-2.5 rounded-xl border border-white/[0.07]">
                                 <span class="text-[10px] text-slate-400 uppercase tracking-wider block">Superficie Eq.</span>
-                                <span id="cpKpiSup" class="text-base sm:text-lg font-bold text-white block mt-0.5">150.00 m²</span>
-                                <span class="text-[10px] text-slate-500">Cómputo en planta</span>
+                                <span id="cpKpiSup" class="text-base font-bold text-white block mt-0.5">150.00 m²</span>
+                                <span class="text-[9px] text-slate-500">Cómputo en planta</span>
                             </div>
-                            <div class="bg-slate-950/80 p-3 rounded-xl border border-white/[0.07]">
-                                <span class="text-[10px] text-slate-400 uppercase tracking-wider block">Costo Unitario</span>
-                                <span id="cpKpiM2" class="text-base sm:text-lg font-bold text-amber-400 block mt-0.5">$ 1.416.304 / m²</span>
-                                <span class="text-[10px] text-slate-500">Base AyC oficial</span>
+                            <div class="bg-slate-950/80 p-2.5 rounded-xl border border-amber-500/25">
+                                <span class="text-[10px] text-amber-400 uppercase tracking-wider block">Hormigón Total</span>
+                                <span id="cpKpiHormigon" class="text-base font-bold text-amber-400 block mt-0.5">28.5 m³</span>
+                                <span class="text-[9px] text-slate-500">Estructura H°A°</span>
                             </div>
-                            <div class="col-span-2 bg-gradient-to-r from-amber-950/40 via-slate-900/90 to-amber-950/40 p-3 rounded-xl border border-amber-500/30 relative overflow-hidden">
-                                <div class="flex items-center justify-between text-[10px] text-amber-300 uppercase tracking-wider">
-                                    <span>TOTAL GENERAL ESTIMADO</span>
-                                    <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-400"></i>
-                                </div>
-                                <span id="cpKpiTotal" class="text-xl sm:text-2xl font-bold text-white tracking-tight block mt-0.5">$ 212.445.661</span>
-                                <span id="cpKpiSubtext" class="text-[10px] text-amber-400/90 font-mono">Incluye Materiales + MO + Honorarios</span>
+                            <div class="bg-slate-950/80 p-2.5 rounded-xl border border-cn-cyan/25">
+                                <span class="text-[10px] text-cn-cyan uppercase tracking-wider block">Acero CIRSOC</span>
+                                <span id="cpKpiAceroTotal" class="text-base font-bold text-cn-cyan block mt-0.5">2.150 kg</span>
+                                <span class="text-[9px] text-slate-500">Armadura ADN-420</span>
+                            </div>
+                            <div class="bg-slate-950/80 p-2.5 rounded-xl border border-emerald-500/25">
+                                <span class="text-[10px] text-emerald-400 uppercase tracking-wider block">Mano de Obra</span>
+                                <span id="cpKpiHoras" class="text-base font-bold text-emerald-400 block mt-0.5">1.480 hs</span>
+                                <span class="text-[9px] text-slate-500">Rendimiento Oficial</span>
                             </div>
                         </div>
 
-                        <!-- Gráfico Marquetinero 1: Barra de Distribución Financiera Progresiva APU -->
-                        <div class="mt-4 bg-slate-950/80 p-4 rounded-xl border border-white/[0.07]">
-                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2 text-xs font-mono">
+                        <!-- Gráfico A: Estructura Porcentual Relativa APU (%) -->
+                        <div class="mt-3 bg-slate-950/80 p-3 rounded-xl border border-white/[0.07]">
+                            <div class="flex items-center justify-between mb-1.5 text-xs font-mono">
                                 <span class="text-slate-300 font-bold flex items-center gap-1.5">
                                     <i data-lucide="pie-chart" class="w-3.5 h-3.5 text-amber-400"></i>
                                     Estructura del Presupuesto (APU)
                                 </span>
-                                <span class="text-[11px] text-slate-400" id="cpLabelLeyenda">Materiales + UOCRA + Honorarios</span>
+                                <span class="text-[10px] text-slate-400">Distribución porcentual relativa</span>
                             </div>
 
                             <!-- Barra Segmentada Interactiva Multicapa -->
-                            <div class="w-full h-4 bg-slate-900 rounded-lg overflow-hidden flex shadow-inner border border-white/5">
-                                <div id="cpBarMat" style="width: 53.4%;" class="h-full bg-amber-500 transition-all duration-500 relative group cursor-pointer" title="Materiales: 53.4%"></div>
-                                <div id="cpBarMo" style="width: 28.2%;" class="h-full bg-sky-500 transition-all duration-500 relative group cursor-pointer" title="Mano de Obra UOCRA: 28.2%"></div>
-                                <div id="cpBarGg" style="width: 9.1%;" class="h-full bg-emerald-500 transition-all duration-500 relative group cursor-pointer" title="Gastos Generales & Beneficio: 9.1%"></div>
-                                <div id="cpBarHon" style="width: 9.3%;" class="h-full bg-purple-500 transition-all duration-500 relative group cursor-pointer" title="Honorarios Proy & DT: 9.3%"></div>
+                            <div class="w-full h-3.5 bg-slate-900 rounded-md overflow-hidden flex shadow-inner border border-white/5">
+                                <div id="cpBarMat" style="width: 53.4%;" class="h-full bg-amber-500 transition-all duration-500 relative group cursor-pointer" title="Materiales"></div>
+                                <div id="cpBarMo" style="width: 28.2%;" class="h-full bg-sky-500 transition-all duration-500 relative group cursor-pointer" title="Mano de Obra"></div>
+                                <div id="cpBarGg" style="width: 9.1%;" class="h-full bg-emerald-500 transition-all duration-500 relative group cursor-pointer" title="Gastos Generales & Beneficio"></div>
+                                <div id="cpBarHon" style="width: 9.3%;" class="h-full bg-purple-500 transition-all duration-500 relative group cursor-pointer" title="Honorarios Proyecto & DT"></div>
                             </div>
 
-                            <!-- Leyenda Detallada con Porcentajes y Valores -->
-                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 mt-3 text-[11px] font-mono">
-                                <div class="flex items-center gap-2">
-                                    <span class="w-2.5 h-2.5 rounded-sm bg-amber-500 shrink-0"></span>
+                            <!-- Leyenda Detallada con Porcentajes -->
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-2 text-[11px] font-mono">
+                                <div class="flex items-center gap-1.5">
+                                    <span class="w-2 h-2 rounded-sm bg-amber-500 shrink-0"></span>
                                     <div>
-                                        <div class="text-slate-400 text-[10px]">MATERIALES</div>
-                                        <div id="cpValMat" class="font-bold text-white">53.4% • $113.4M</div>
+                                        <div class="text-slate-400 text-[9px]">MATERIALES</div>
+                                        <div id="cpValMat" class="font-bold text-white">53.4%</div>
                                     </div>
                                 </div>
-                                <div class="flex items-center gap-2">
-                                    <span class="w-2.5 h-2.5 rounded-sm bg-sky-500 shrink-0"></span>
+                                <div class="flex items-center gap-1.5">
+                                    <span class="w-2 h-2 rounded-sm bg-sky-500 shrink-0"></span>
                                     <div>
-                                        <div class="text-slate-400 text-[10px]">MANO DE OBRA</div>
-                                        <div id="cpValMo" class="font-bold text-white">28.2% • $59.9M</div>
+                                        <div class="text-slate-400 text-[9px]">MANO DE OBRA</div>
+                                        <div id="cpValMo" class="font-bold text-white">28.2%</div>
                                     </div>
                                 </div>
-                                <div class="flex items-center gap-2">
-                                    <span class="w-2.5 h-2.5 rounded-sm bg-emerald-500 shrink-0"></span>
+                                <div class="flex items-center gap-1.5">
+                                    <span class="w-2 h-2 rounded-sm bg-emerald-500 shrink-0"></span>
                                     <div>
-                                        <div class="text-slate-400 text-[10px]">GG & BENEFICIO</div>
-                                        <div id="cpValGg" class="font-bold text-white">9.1% • $19.4M</div>
+                                        <div class="text-slate-400 text-[9px]">GG & BENEFICIO</div>
+                                        <div id="cpValGg" class="font-bold text-white">9.1%</div>
                                     </div>
                                 </div>
-                                <div class="flex items-center gap-2">
-                                    <span class="w-2.5 h-2.5 rounded-sm bg-purple-500 shrink-0"></span>
+                                <div class="flex items-center gap-1.5">
+                                    <span class="w-2 h-2 rounded-sm bg-purple-500 shrink-0"></span>
                                     <div>
-                                        <div class="text-slate-400 text-[10px]">HONORARIOS DT</div>
-                                        <div id="cpValHon" class="font-bold text-white">9.3% • $19.7M</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Gráfico Marquetinero 2: Desglose por Rubros Constructivos Clave (Barras Animadas) -->
-                        <div class="mt-4 bg-slate-950/80 p-4 rounded-xl border border-white/[0.07] font-mono">
-                            <div class="flex items-center justify-between text-xs mb-3">
-                                <span class="text-slate-300 font-bold flex items-center gap-1.5">
-                                    <i data-lucide="bar-chart-3" class="w-3.5 h-3.5 text-amber-400"></i>
-                                    Incidencia por Rubros Principales de Obra
-                                </span>
-                                <span class="text-[10px] text-amber-400 font-mono">Modelo Paramétrico</span>
-                            </div>
-
-                            <div class="space-y-2.5 text-xs">
-                                <!-- Rubro 1 -->
-                                <div>
-                                    <div class="flex justify-between text-[11px] mb-1">
-                                        <span id="cpRubro1Nom" class="text-slate-300">Hormigón & Estructura (Sync CN_STRUCT_3D)</span>
-                                        <span id="cpRubro1Pct" class="text-amber-400 font-bold">32.0%</span>
-                                    </div>
-                                    <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden">
-                                        <div id="cpRubro1Bar" style="width: 32%;" class="h-full bg-gradient-to-r from-amber-500 to-amber-400 rounded-full transition-all duration-500"></div>
-                                    </div>
-                                </div>
-                                <!-- Rubro 2 -->
-                                <div>
-                                    <div class="flex justify-between text-[11px] mb-1">
-                                        <span id="cpRubro2Nom" class="text-slate-300">Mampostería, Submuración & Aislaciones</span>
-                                        <span id="cpRubro2Pct" class="text-sky-400 font-bold">24.0%</span>
-                                    </div>
-                                    <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden">
-                                        <div id="cpRubro2Bar" style="width: 24%;" class="h-full bg-gradient-to-r from-sky-500 to-sky-400 rounded-full transition-all duration-500"></div>
-                                    </div>
-                                </div>
-                                <!-- Rubro 3 -->
-                                <div>
-                                    <div class="flex justify-between text-[11px] mb-1">
-                                        <span id="cpRubro3Nom" class="text-slate-300">Terminaciones, Pisos, Revestimientos & Pintura</span>
-                                        <span id="cpRubro3Pct" class="text-emerald-400 font-bold">18.0%</span>
-                                    </div>
-                                    <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden">
-                                        <div id="cpRubro3Bar" style="width: 18%;" class="h-full bg-gradient-to-r from-emerald-500 to-emerald-400 rounded-full transition-all duration-500"></div>
-                                    </div>
-                                </div>
-                                <!-- Rubro 4 -->
-                                <div>
-                                    <div class="flex justify-between text-[11px] mb-1">
-                                        <span id="cpRubro4Nom" class="text-slate-300">Cubiertas, Techos & Estructuras</span>
-                                        <span id="cpRubro4Pct" class="text-orange-400 font-bold">14.0%</span>
-                                    </div>
-                                    <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden">
-                                        <div id="cpRubro4Bar" style="width: 14%;" class="h-full bg-gradient-to-r from-orange-500 to-orange-400 rounded-full transition-all duration-500"></div>
-                                    </div>
-                                </div>
-                                <!-- Rubro 5 -->
-                                <div>
-                                    <div class="flex justify-between text-[11px] mb-1">
-                                        <span id="cpRubro5Nom" class="text-slate-300">Instalaciones (Sanitaria, Gas, Eléctrica)</span>
-                                        <span id="cpRubro5Pct" class="text-purple-400 font-bold">12.0%</span>
-                                    </div>
-                                    <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden">
-                                        <div id="cpRubro5Bar" style="width: 12%;" class="h-full bg-gradient-to-r from-purple-500 to-purple-400 rounded-full transition-all duration-500"></div>
+                                        <div class="text-slate-400 text-[9px]">HONORARIOS DT</div>
+                                        <div id="cpValHon" class="font-bold text-white">9.3%</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Gráfico Marquetinero 3: Insumos Clave para Corralón (BOM Instantáneo) -->
-                        <div class="mt-4 bg-slate-950/80 p-4 rounded-xl border border-white/[0.07] font-mono">
-                            <div class="flex items-center justify-between text-xs mb-3">
+                        <!-- Gráfico B: Explosión de Insumos Críticos para Corralón (BOM Físico) -->
+                        <div class="mt-3 bg-slate-950/80 p-3 rounded-xl border border-white/[0.07] font-mono">
+                            <div class="flex items-center justify-between text-xs mb-2">
                                 <span class="text-slate-300 font-bold flex items-center gap-1.5">
                                     <i data-lucide="package" class="w-3.5 h-3.5 text-amber-400"></i>
-                                    Explosión de Insumos Críticos para Corralón (BOM)
+                                    Explosión de Insumos para Corralón (BOM)
                                 </span>
-                                <span class="text-[10px] text-slate-400">Con 5% desperdicio técnico</span>
+                                <span class="text-[10px] text-slate-400">Con factor de desperdicio técnico</span>
                             </div>
 
-                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-                                <div class="bg-slate-900/90 p-3 rounded-lg border border-white/5">
-                                    <div class="flex items-center justify-between text-[10px] text-slate-400">
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                                <div class="bg-slate-900/90 p-2.5 rounded-lg border border-white/5">
+                                    <div class="flex items-center justify-between text-[9px] text-slate-400">
                                         <span>CEMENTO</span>
                                         <i data-lucide="box" class="w-3 h-3 text-amber-400"></i>
                                     </div>
-                                    <div id="cpBomCemento" class="text-sm sm:text-base font-bold text-white mt-1">840 bolsas</div>
+                                    <div id="cpBomCemento" class="text-sm font-bold text-white mt-0.5">840 bolsas</div>
                                     <div class="text-[9px] text-slate-500">Bolsas 50 kg</div>
                                 </div>
-                                <div class="bg-slate-900/90 p-3 rounded-lg border border-white/5">
-                                    <div class="flex items-center justify-between text-[10px] text-slate-400">
+                                <div class="bg-slate-900/90 p-2.5 rounded-lg border border-white/5">
+                                    <div class="flex items-center justify-between text-[9px] text-slate-400">
                                         <span>ACERO ADN-420</span>
                                         <i data-lucide="git-commit" class="w-3 h-3 text-cn-cyan"></i>
                                     </div>
-                                    <div id="cpBomAcero" class="text-sm sm:text-base font-bold text-cn-cyan mt-1">3.420 kg</div>
-                                    <div class="text-[9px] text-slate-500">CIRSOC 201</div>
+                                    <div id="cpBomAcero" class="text-sm font-bold text-cn-cyan mt-0.5">2.150 kg</div>
+                                    <div class="text-[9px] text-slate-500">Barras por calibre</div>
                                 </div>
-                                <div class="bg-slate-900/90 p-3 rounded-lg border border-white/5">
-                                    <div class="flex items-center justify-between text-[10px] text-slate-400">
+                                <div class="bg-slate-900/90 p-2.5 rounded-lg border border-white/5">
+                                    <div class="flex items-center justify-between text-[9px] text-slate-400">
                                         <span>ÁRIDOS / ARENA</span>
                                         <i data-lucide="mountain" class="w-3 h-3 text-emerald-400"></i>
                                     </div>
-                                    <div id="cpBomAridos" class="text-sm sm:text-base font-bold text-emerald-400 mt-1">48.0 m³</div>
+                                    <div id="cpBomAridos" class="text-sm font-bold text-emerald-400 mt-0.5">48.0 m³</div>
                                     <div class="text-[9px] text-slate-500">Arena & Ripio</div>
                                 </div>
-                                <div class="bg-slate-900/90 p-3 rounded-lg border border-white/5">
-                                    <div class="flex items-center justify-between text-[10px] text-slate-400">
+                                <div class="bg-slate-900/90 p-2.5 rounded-lg border border-white/5">
+                                    <div class="flex items-center justify-between text-[9px] text-slate-400">
                                         <span>MAMPOSTERÍA</span>
                                         <i data-lucide="grid" class="w-3 h-3 text-orange-400"></i>
                                     </div>
-                                    <div id="cpBomLadrillos" class="text-sm sm:text-base font-bold text-orange-400 mt-1">6.800 un.</div>
+                                    <div id="cpBomLadrillos" class="text-sm font-bold text-orange-400 mt-0.5">6.800 un.</div>
                                     <div class="text-[9px] text-slate-500">Cerámicos 12x18x33</div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Pipeline Gráfico de Integración: CN_STRUCT_3D ➔ CN Presupuestos ➔ Corralón -->
-                        <div class="mt-4 p-3.5 rounded-xl bg-gradient-to-r from-orange-950/30 via-slate-900 to-amber-950/30 border border-amber-500/20 text-xs font-mono text-slate-300 flex flex-col sm:flex-row items-center justify-between gap-3">
-                            <div class="flex items-center gap-3">
-                                <div class="w-9 h-9 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0">
-                                    <i data-lucide="cpu" class="w-4 h-4"></i>
+                        <!-- Pipeline Gráfico de Integración: CN_STRUCT_3D ➔ CN_Presupuestos ➔ Corralón -->
+                        <div class="mt-3 p-2.5 rounded-xl bg-gradient-to-r from-orange-950/30 via-slate-900 to-amber-950/30 border border-amber-500/20 text-xs font-mono text-slate-300 flex flex-col sm:flex-row items-center justify-between gap-2.5">
+                            <div class="flex items-center gap-2.5">
+                                <div class="w-7 h-7 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0">
+                                    <i data-lucide="cpu" class="w-3.5 h-3.5"></i>
                                 </div>
                                 <div>
                                     <div class="text-[11px] font-bold text-white flex items-center gap-2">
-                                        <span>Pipeline de Integración Digital</span>
-                                        <span class="px-1.5 py-0.2 rounded bg-cn-cyan/15 text-cn-cyan text-[9px]">100% AUTOMATIZADO</span>
+                                        <span>Pipeline Digital de Ingeniería</span>
+                                        <span class="px-1.5 py-0.2 rounded bg-cn-cyan/15 text-cn-cyan text-[9px]">SYNC DIRECTO</span>
                                     </div>
-                                    <div class="text-[10px] text-slate-400 mt-0.5">CN_STRUCT_3D (Vigas, Columnas, Losas) ➔ Cómputo M³ y Kg ➔ CN Presupuestos APU ➔ Compra Corralón</div>
+                                    <div class="text-[10px] text-slate-400">CN_STRUCT_3D (Vigas, Columnas, Losas) ➔ Cómputo Físico m³ y kg ➔ Matriz APU ➔ Planilla Corralón</div>
                                 </div>
                             </div>
-                            <a href="#contacto" onclick="document.getElementById('formArea').value='Software CN Presupuestos (Cómputo & Presupuestos de Obra)';" class="shrink-0 px-3.5 py-1.5 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/40 text-amber-300 text-[11px] font-bold transition-all flex items-center gap-1.5">
-                                <span>Ver Demo</span>
-                                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                            <a href="#contacto" onclick="document.getElementById('formArea').value='Software CN_Presupuestos (Cómputo & Presupuestos de Obra)';" class="shrink-0 px-3 py-1 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/40 text-amber-300 text-[11px] font-bold transition-all flex items-center gap-1">
+                                <span>Solicitar Demo</span>
+                                <i data-lucide="arrow-right" class="w-3 h-3"></i>
                             </a>
                         </div>
 
@@ -1221,7 +1148,7 @@
                 Comunicate con CN Ingeniería
             </h2>
             <p class="mt-3 text-slate-300 text-base sm:text-lg max-w-2xl mx-auto">
-                Cotizá tu proyecto de cálculo estructural e instalaciones, solicitá una demo de <strong class="text-white">CN_STRUCT_3D</strong>, probá <strong class="text-amber-400">CN Presupuestos</strong> o consultá por <strong class="text-white">Caja Stock</strong>.
+                Cotizá tu proyecto de cálculo estructural e instalaciones, solicitá una demo de <strong class="text-white">CN_STRUCT_3D</strong>, probá <strong class="text-amber-400">CN_Presupuestos</strong> o consultá por <strong class="text-white">Caja Stock</strong>.
             </p>
 
             <!-- Tarjeta Visual Destacada de Correo Institucional -->
@@ -1263,7 +1190,7 @@
                         <option value="Proyecto de Instalaciones">Proyecto de Instalaciones (Eléctricas, Sanitarias, Gas)</option>
                         <option value="Consultoría / Peritaje de Obras Mayores">Consultoría de Obras de Gran Envergadura / Peritaje</option>
                         <option value="Software CN_STRUCT_3D (Demo / Licencia)">Software CN_STRUCT_3D (Demo / Licencia)</option>
-                        <option value="Software CN Presupuestos (Cómputo & Presupuestos de Obra)">Software CN Presupuestos (Cómputo & Presupuestos de Obra)</option>
+                        <option value="Software CN_Presupuestos (Cómputo & Presupuestos de Obra)">Software CN_Presupuestos (Cómputo & Presupuestos de Obra)</option>
                         <option value="Software Caja Stock (Gestión Comercial)">Software Caja Stock (Gestión Comercial)</option>
                     </select>
                 </div>
@@ -1304,7 +1231,7 @@
                 <span>•</span>
                 <a href="#cn-struct" class="hover:text-cn-orange transition-colors">CN_STRUCT_3D</a>
                 <span>•</span>
-                <a href="#cn-presupuestos" class="hover:text-amber-400 transition-colors">CN Presupuestos</a>
+                <a href="#cn-presupuestos" class="hover:text-amber-400 transition-colors">CN_Presupuestos</a>
                 <span>•</span>
                 <a href="#caja-stock" class="hover:text-cn-green transition-colors">Caja Stock</a>
             </div>
@@ -1388,117 +1315,49 @@
         }
 
         /* -------------------------------------------------------------
-           LÓGICA DEL SIMULADOR INTERACTIVO: CN PRESUPUESTOS
+           LÓGICA DEL SIMULADOR INTERACTIVO: CN_PRESUPUESTOS (CÓMPUTO FÍSICO)
         ------------------------------------------------------------- */
         const CN_PRESUPUESTOS_DATA = {
-            ayc150: {
-                nombre: 'Vivienda Prototipo Oficial AyC 150m²',
-                sup: 150.0,
-                totalArs: 212445661,
-                m2Ars: 1416304,
+            vivienda150: {
+                nombre: 'Vivienda Unifamiliar (150 m²)',
+                sup: '150.00 m²',
+                hormigon: '28.5 m³',
+                acero: '2.150 kg',
+                horasMo: '1.480 hs',
                 pctMat: 53.4, pctMo: 28.2, pctGg: 9.1, pctHon: 9.3,
-                valMatArs: 113445980, valMoArs: 59910000, valGgArs: 19396681, valHonArs: 19693000,
-                rubros: [
-                    { nom: 'Hormigón & Estructura (Sync CN_STRUCT_3D)', pct: 32.0 },
-                    { nom: 'Mampostería, Submuración & Aislaciones', pct: 24.0 },
-                    { nom: 'Terminaciones, Pisos, Revestimientos & Pintura', pct: 18.0 },
-                    { nom: 'Cubiertas, Techos & Estructuras', pct: 14.0 },
-                    { nom: 'Instalaciones (Sanitaria, Gas, Eléctrica)', pct: 12.0 }
-                ],
-                bom: { cemento: '840 bolsas', acero: '3.420 kg', aridos: '48.0 m³', ladrillos: '6.800 un.' }
+                bom: { cemento: '840 bolsas', acero: '2.150 kg', aridos: '48.0 m³', ladrillos: '6.800 un.' }
             },
             cnstruct: {
-                nombre: 'Pórtico Espacial 3 Plantas (CN_STRUCT_3D Sync)',
-                sup: 320.0,
-                totalArs: 368500000,
-                m2Ars: 1151560,
+                nombre: 'Pórtico Espacial 3 Plantas (Sync CN_STRUCT_3D)',
+                sup: '320.00 m²',
+                hormigon: '92.0 m³',
+                acero: '8.850 kg',
+                horasMo: '3.250 hs',
                 pctMat: 58.5, pctMo: 24.0, pctGg: 9.0, pctHon: 8.5,
-                valMatArs: 215572500, valMoArs: 88440000, valGgArs: 33165000, valHonArs: 31322500,
-                rubros: [
-                    { nom: 'Hormigón & Fundaciones (Bases Biaxiales)', pct: 46.0 },
-                    { nom: 'Armaduras de Refuerzo CIRSOC 201 (Acero)', pct: 28.0 },
-                    { nom: 'Encofrados y Apuntalamiento Estructural', pct: 14.0 },
-                    { nom: 'Mampostería de Cerramiento y Muros', pct: 8.0 },
-                    { nom: 'Instalaciones Embutidas y Pases', pct: 4.0 }
-                ],
-                bom: { cemento: '1.620 bolsas', acero: '9.850 kg', aridos: '95.0 m³', ladrillos: '2.400 un.' }
-            },
-            banio: {
-                nombre: 'Remodelación Integral Baño & Cocina (25 m²)',
-                sup: 25.0,
-                totalArs: 39850000,
-                m2Ars: 1594000,
-                pctMat: 49.0, pctMo: 35.0, pctGg: 8.5, pctHon: 7.5,
-                valMatArs: 19526500, valMoArs: 13947500, valGgArs: 3387250, valHonArs: 2988750,
-                rubros: [
-                    { nom: 'Revestimientos, Porcelanatos & Zócalos', pct: 38.0 },
-                    { nom: 'Instalaciones Sanitarias, Desagües & Gas', pct: 32.0 },
-                    { nom: 'Artefactos Sanitarios, Mesadas & Grifería', pct: 18.0 },
-                    { nom: 'Demoliciones, Retiro & Contrapisos', pct: 8.0 },
-                    { nom: 'Pintura Epoxi & Cielorraso Antihumedad', pct: 4.0 }
-                ],
-                bom: { cemento: '95 bolsas', acero: '180 kg', aridos: '4.5 m³', ladrillos: '450 un.' }
+                bom: { cemento: '1.620 bolsas', acero: '8.850 kg', aridos: '95.0 m³', ladrillos: '2.400 un.' }
             },
             tinglado: {
                 nombre: 'Nave Industrial / Tinglado Metálico (300 m²)',
-                sup: 300.0,
-                totalArs: 278400000,
-                m2Ars: 928000,
+                sup: '300.00 m²',
+                hormigon: '45.0 m³',
+                acero: '6.400 kg',
+                horasMo: '1.950 hs',
                 pctMat: 62.0, pctMo: 22.0, pctGg: 9.0, pctHon: 7.0,
-                valMatArs: 172608000, valMoArs: 61248000, valGgArs: 25056000, valHonArs: 19488000,
-                rubros: [
-                    { nom: 'Estructura Metálica (Perfiles & Cabriadas)', pct: 44.0 },
-                    { nom: 'Cubierta Cincalum & Aislación Térmica', pct: 26.0 },
-                    { nom: 'Piso Industrial H°A° Llaneado & Malla', pct: 18.0 },
-                    { nom: 'Zapatas Aisladas & Anclajes Químicos', pct: 8.0 },
-                    { nom: 'Instalación Eléctrica e Iluminación LED', pct: 4.0 }
-                ],
-                bom: { cemento: '420 bolsas', acero: '8.400 kg', aridos: '38.0 m³', ladrillos: '1.200 un.' }
+                bom: { cemento: '420 bolsas', acero: '6.400 kg', aridos: '38.0 m³', ladrillos: '1.200 un.' }
             }
         };
 
-        let currentPresupuestoKey = 'ayc150';
-        let currentPresupuestoMoneda = 'ARS';
-        const TIPO_CAMBIO_USD = 1220.0;
-
-        function formatMoney(amount, currency) {
-            if (currency === 'USD') {
-                return 'USD ' + Math.round(amount).toLocaleString('es-AR');
-            }
-            return '$ ' + Math.round(amount).toLocaleString('es-AR');
-        }
-
-        function formatMillions(amount, currency) {
-            if (currency === 'USD') {
-                return 'USD ' + (amount / 1000).toFixed(1) + 'K';
-            }
-            return '$ ' + (amount / 1000000).toFixed(1) + 'M';
-        }
-
-        function setPresupuestoMoneda(moneda) {
-            currentPresupuestoMoneda = moneda;
-            const btnArs = document.getElementById('btnMonedaArs');
-            const btnUsd = document.getElementById('btnMonedaUsd');
-
-            if (moneda === 'ARS') {
-                btnArs.className = 'px-2 py-0.5 rounded-md bg-amber-500 text-slate-950 font-bold transition-all';
-                btnUsd.className = 'px-2 py-0.5 rounded-md text-slate-400 hover:text-white transition-all';
-            } else {
-                btnUsd.className = 'px-2 py-0.5 rounded-md bg-amber-500 text-slate-950 font-bold transition-all';
-                btnArs.className = 'px-2 py-0.5 rounded-md text-slate-400 hover:text-white transition-all';
-            }
-            renderPresupuestoSimulator();
-        }
+        let currentPresupuestoKey = 'vivienda150';
 
         function selectPresupuestoPreset(key) {
             currentPresupuestoKey = key;
-            ['ayc150', 'cnstruct', 'banio', 'tinglado'].forEach(k => {
+            ['vivienda150', 'cnstruct', 'tinglado'].forEach(k => {
                 const btn = document.getElementById('tabPreset-' + k);
                 if (btn) {
                     if (k === key) {
-                        btn.className = 'preset-btn active px-2.5 py-2 rounded-lg text-left text-xs font-mono transition-all border border-amber-500/60 bg-amber-500/15 text-white shadow-sm';
+                        btn.className = 'preset-btn active px-2 py-1.5 rounded-lg text-left text-xs font-mono transition-all border border-amber-500/60 bg-amber-500/15 text-white shadow-sm';
                     } else {
-                        btn.className = 'preset-btn px-2.5 py-2 rounded-lg text-left text-xs font-mono transition-all border border-white/5 bg-slate-900/80 text-slate-300 hover:border-amber-400/40';
+                        btn.className = 'preset-btn px-2 py-1.5 rounded-lg text-left text-xs font-mono transition-all border border-white/5 bg-slate-900/80 text-slate-300 hover:border-amber-400/40';
                     }
                 }
             });
@@ -1509,38 +1368,22 @@
             const data = CN_PRESUPUESTOS_DATA[currentPresupuestoKey];
             if (!data) return;
 
-            const isUsd = currentPresupuestoMoneda === 'USD';
-            const rate = isUsd ? TIPO_CAMBIO_USD : 1;
+            // Telemetría de Cómputo Físico
+            document.getElementById('cpKpiSup').innerText = data.sup;
+            document.getElementById('cpKpiHormigon').innerText = data.hormigon;
+            document.getElementById('cpKpiAceroTotal').innerText = data.acero;
+            document.getElementById('cpKpiHoras').innerText = data.horasMo;
 
-            // KPIs
-            document.getElementById('cpKpiSup').innerText = data.sup.toFixed(2) + ' m²';
-            document.getElementById('cpKpiM2').innerText = formatMoney(data.m2Ars / rate, currentPresupuestoMoneda) + ' / m²';
-            document.getElementById('cpKpiTotal').innerText = formatMoney(data.totalArs / rate, currentPresupuestoMoneda);
-            document.getElementById('cpKpiSubtext').innerText = isUsd 
-                ? 'Equivalente @ T/C 1 USD = $1.220 ARS' 
-                : 'Incluye Materiales + MO + Honorarios';
-
-            // Barra APU
+            // Barra APU Porcentual
             document.getElementById('cpBarMat').style.width = data.pctMat + '%';
             document.getElementById('cpBarMo').style.width = data.pctMo + '%';
             document.getElementById('cpBarGg').style.width = data.pctGg + '%';
             document.getElementById('cpBarHon').style.width = data.pctHon + '%';
 
-            document.getElementById('cpValMat').innerText = `${data.pctMat}% • ${formatMillions(data.valMatArs / rate, currentPresupuestoMoneda)}`;
-            document.getElementById('cpValMo').innerText = `${data.pctMo}% • ${formatMillions(data.valMoArs / rate, currentPresupuestoMoneda)}`;
-            document.getElementById('cpValGg').innerText = `${data.pctGg}% • ${formatMillions(data.valGgArs / rate, currentPresupuestoMoneda)}`;
-            document.getElementById('cpValHon').innerText = `${data.pctHon}% • ${formatMillions(data.valHonArs / rate, currentPresupuestoMoneda)}`;
-
-            // Rubros
-            data.rubros.forEach((r, idx) => {
-                const i = idx + 1;
-                const nomEl = document.getElementById('cpRubro' + i + 'Nom');
-                const pctEl = document.getElementById('cpRubro' + i + 'Pct');
-                const barEl = document.getElementById('cpRubro' + i + 'Bar');
-                if (nomEl) nomEl.innerText = r.nom;
-                if (pctEl) pctEl.innerText = r.pct.toFixed(1) + '%';
-                if (barEl) barEl.style.width = r.pct + '%';
-            });
+            document.getElementById('cpValMat').innerText = data.pctMat + '%';
+            document.getElementById('cpValMo').innerText = data.pctMo + '%';
+            document.getElementById('cpValGg').innerText = data.pctGg + '%';
+            document.getElementById('cpValHon').innerText = data.pctHon + '%';
 
             // Insumos BOM
             document.getElementById('cpBomCemento').innerText = data.bom.cemento;
