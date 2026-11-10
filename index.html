@@ -155,9 +155,9 @@
                     <span class="w-1.5 h-1.5 rounded-full bg-amber-400 shadow-[0_0_8px_#f59e0b]"></span>
                     CN_Presupuestos
                 </a>
-                <a href="#caja-stock" class="px-3.5 py-1.5 rounded-full hover:text-cn-green hover:bg-emerald-500/[0.08] transition-all flex items-center gap-2">
+                <a href="#cn-control-obra" class="px-3.5 py-1.5 rounded-full hover:text-cn-green hover:bg-emerald-500/[0.08] transition-all flex items-center gap-2 font-mono">
                     <span class="w-1.5 h-1.5 rounded-full bg-cn-green shadow-[0_0_8px_#10b981]"></span>
-                    Caja Stock
+                    CN_ControlObra
                 </a>
                 <a href="#nosotros" class="px-3.5 py-1.5 rounded-full hover:text-white hover:bg-white/[0.06] transition-all">
                     El Equipo
@@ -189,8 +189,8 @@
             <a href="#cn-presupuestos" onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="flex items-center gap-2 py-2 text-slate-300 hover:text-amber-400 font-mono transition-colors">
                 <span class="w-2 h-2 rounded-full bg-amber-400"></span> CN_Presupuestos
             </a>
-            <a href="#caja-stock" onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="flex items-center gap-2 py-2 text-slate-300 hover:text-cn-green transition-colors">
-                <span class="w-2 h-2 rounded-full bg-cn-green"></span> Caja Stock
+            <a href="#cn-control-obra" onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="flex items-center gap-2 py-2 text-slate-300 hover:text-cn-green font-mono transition-colors">
+                <span class="w-2 h-2 rounded-full bg-cn-green"></span> CN_ControlObra
             </a>
             <a href="#nosotros" onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="block py-2 text-slate-300 hover:text-cn-cyan transition-colors">El Equipo</a>
             <div class="pt-2 border-t border-white/10">
@@ -238,7 +238,7 @@
                 </a>
                 <a href="#software-division" class="w-full sm:w-auto px-7 py-4 rounded-xl surface-card border border-white/10 hover:border-cn-cyan/50 text-slate-200 hover:text-white font-semibold text-sm sm:text-base transition-all duration-200 hover:-translate-y-0.5 flex items-center justify-center gap-2.5 group">
                     <i data-lucide="terminal" class="w-5 h-5 text-cn-cyan group-hover:rotate-6 transition-transform"></i>
-                    <span>Nuestros Softwares (CN_STRUCT / CN_Presupuestos / Caja Stock)</span>
+                    <span>Nuestros Softwares (CN_STRUCT / CN_Presupuestos / CN_ControlObra)</span>
                 </a>
             </div>
 
@@ -869,15 +869,15 @@
         </div>
     </section>
 
-    <!-- Módulo 2.3: Caja Stock -->
-    <section id="caja-stock" class="py-16 md:py-24 border-t border-white/[0.06] relative overflow-hidden">
+    <!-- Módulo 2.3: CN_ControlObra -->
+    <section id="cn-control-obra" class="py-16 md:py-24 border-t border-white/[0.06] relative overflow-hidden">
         <!-- Luz ambiental esmeralda -->
         <div class="absolute top-1/2 left-10 -translate-y-1/2 w-[460px] h-[460px] bg-cn-green/10 rounded-full blur-[140px] pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
                 
-                <!-- Mockup Interactivo de Alta Gama: Caja Stock -->
+                <!-- Mockup Interactivo de Alta Gama: CN_ControlObra -->
                 <div class="lg:col-span-7 order-2 lg:order-1">
                     <div class="relative rounded-2xl surface-panel border border-white/10 p-3 sm:p-4 glow-green">
                         <!-- Barra Superior de Aplicación -->
@@ -886,113 +886,208 @@
                                 <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
                                 <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
                                 <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
-                                <span class="ml-2 text-slate-200 font-bold">Caja Stock — Control Operativo</span>
+                                <span class="ml-2 text-slate-200 font-bold">CN_ControlObra — Gestión de Obrador</span>
                             </div>
                             <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-emerald-500/10 border border-emerald-500/30 text-cn-green font-semibold text-[11px]">
                                 <span class="w-1.5 h-1.5 rounded-full bg-cn-green animate-pulse"></span>
-                                Caja Abierta
+                                Obrador Activo
                             </span>
+                        </div>
+
+                        <!-- Selector de Frentes de Obra / Modos Operativos -->
+                        <div class="mt-3 bg-slate-950/70 p-2 rounded-xl border border-white/[0.06] font-mono">
+                            <div class="text-[10px] uppercase tracking-wider text-slate-400 mb-1.5 flex items-center justify-between">
+                                <span class="flex items-center gap-1.5"><i data-lucide="hard-hat" class="w-3 h-3 text-cn-green"></i> Frente de Trabajo Activo:</span>
+                                <span class="text-cn-green/80 text-[10px]">Trazabilidad en tiempo real</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 text-xs">
+                                <button type="button" id="tabObra-frente1" onclick="selectObraFrente('frente1')" class="obra-tab-btn active px-2 py-1.5 rounded-lg text-left transition-all border border-emerald-500/60 bg-emerald-500/15 text-white shadow-sm">
+                                    <div class="font-bold flex items-center gap-1">🏗️ Frente 1</div>
+                                    <div class="text-[10px] text-emerald-300/80">Estructura H°A°</div>
+                                </button>
+                                <button type="button" id="tabObra-frente2" onclick="selectObraFrente('frente2')" class="obra-tab-btn px-2 py-1.5 rounded-lg text-left transition-all border border-white/5 bg-slate-900/80 text-slate-300 hover:border-emerald-400/40">
+                                    <div class="font-bold flex items-center gap-1">🧱 Frente 2</div>
+                                    <div class="text-[10px] text-slate-400">Mampostería</div>
+                                </button>
+                                <button type="button" id="tabObra-acopios" onclick="selectObraFrente('acopios')" class="obra-tab-btn px-2 py-1.5 rounded-lg text-left transition-all border border-white/5 bg-slate-900/80 text-slate-300 hover:border-emerald-400/40">
+                                    <div class="font-bold flex items-center gap-1">🚜 Acopios</div>
+                                    <div class="text-[10px] text-slate-400">En Corralón</div>
+                                </button>
+                            </div>
                         </div>
                         
                         <!-- Cuerpo del Dashboard Operativo -->
-                        <div class="bg-slate-950/90 rounded-xl mt-3 p-5 sm:p-6 flex flex-col justify-between border border-white/[0.07] font-mono text-xs space-y-5">
+                        <div class="bg-slate-950/90 rounded-xl mt-3 p-4 sm:p-5 flex flex-col justify-between border border-white/[0.07] font-mono text-xs space-y-4">
                             <!-- Tarjetas de Métricas Principales -->
-                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
-                                <div class="bg-slate-900/90 p-4 rounded-xl border border-white/[0.07] relative overflow-hidden">
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                                <div class="bg-slate-900/90 p-3 rounded-xl border border-white/[0.07] relative overflow-hidden">
                                     <div class="flex items-center justify-between text-slate-400 text-[10px]">
-                                        <span>VENTAS HOY</span>
-                                        <i data-lucide="trending-up" class="w-3.5 h-3.5 text-cn-green"></i>
-                                    </div>
-                                    <div class="text-xl font-bold text-white mt-1.5 tracking-tight">$482.500</div>
-                                    <span class="inline-block mt-1.5 text-[10px] text-cn-green">+18 operaciones hoy</span>
-                                </div>
-
-                                <div class="bg-slate-900/90 p-4 rounded-xl border border-cn-green/25 relative overflow-hidden">
-                                    <div class="flex items-center justify-between text-slate-400 text-[10px]">
-                                        <span>EN STOCK</span>
+                                        <span>EN OBRADOR</span>
                                         <i data-lucide="package-check" class="w-3.5 h-3.5 text-cn-green"></i>
                                     </div>
-                                    <div class="text-xl font-bold text-cn-green mt-1.5 tracking-tight">1.240 un.</div>
-                                    <span class="inline-block mt-1.5 text-[10px] text-slate-400">Inventario sincronizado</span>
+                                    <div id="coKpiObrador" class="text-base font-bold text-white mt-1">340 bolsas</div>
+                                    <span class="inline-block text-[9px] text-cn-green">Stock disponible</span>
                                 </div>
 
-                                <div class="bg-slate-900/90 p-4 rounded-xl border border-amber-500/25 relative overflow-hidden">
+                                <div class="bg-slate-900/90 p-3 rounded-xl border border-cn-green/25 relative overflow-hidden">
                                     <div class="flex items-center justify-between text-slate-400 text-[10px]">
-                                        <span>ALERTAS</span>
-                                        <i data-lucide="alert-triangle" class="w-3.5 h-3.5 text-amber-400"></i>
+                                        <span>ACOPIO CORRALÓN</span>
+                                        <i data-lucide="truck" class="w-3.5 h-3.5 text-cn-cyan"></i>
                                     </div>
-                                    <div class="text-xl font-bold text-amber-400 mt-1.5 tracking-tight">3 ítems</div>
-                                    <span class="inline-block mt-1.5 text-[10px] text-amber-400/80">Reposición sugerida</span>
+                                    <div id="coKpiAcopio" class="text-base font-bold text-cn-cyan mt-1">500 bolsas</div>
+                                    <span class="inline-block text-[9px] text-slate-400">Pendiente retiro</span>
+                                </div>
+
+                                <div class="bg-slate-900/90 p-3 rounded-xl border border-amber-500/25 relative overflow-hidden">
+                                    <div class="flex items-center justify-between text-slate-400 text-[10px]">
+                                        <span>VALES HOY</span>
+                                        <i data-lucide="clipboard-list" class="w-3.5 h-3.5 text-amber-400"></i>
+                                    </div>
+                                    <div id="coKpiVales" class="text-base font-bold text-amber-400 mt-1">6 vales</div>
+                                    <span class="inline-block text-[9px] text-amber-400/80">Despacho cuadrillas</span>
+                                </div>
+
+                                <div class="bg-slate-900/90 p-3 rounded-xl border border-purple-500/25 relative overflow-hidden">
+                                    <div class="flex items-center justify-between text-slate-400 text-[10px]">
+                                        <span>CAJA CHICA</span>
+                                        <i data-lucide="wallet" class="w-3.5 h-3.5 text-purple-400"></i>
+                                    </div>
+                                    <div id="coKpiCaja" class="text-base font-bold text-purple-400 mt-1">Conciliada</div>
+                                    <span class="inline-block text-[9px] text-purple-400/80">Fondo fijo al día</span>
                                 </div>
                             </div>
 
-                            <!-- Registro de Movimientos en Tiempo Real -->
-                            <div class="space-y-2 bg-slate-900/70 p-4 rounded-xl border border-white/[0.06] text-[11px]">
-                                <div class="text-[10px] uppercase tracking-wider text-slate-500 pb-1 border-b border-white/[0.05] flex justify-between">
-                                    <span>Últimos Movimientos de Tesorería</span>
-                                    <span>Estado: Conciliado</span>
+                            <!-- Comparativa Real vs. Presupuesto (Sync con CN_Presupuestos) -->
+                            <div class="bg-slate-900/70 p-3 rounded-xl border border-white/[0.06] space-y-2">
+                                <div class="flex items-center justify-between text-[11px] text-slate-300">
+                                    <span class="flex items-center gap-1.5 font-bold">
+                                        <i data-lucide="link" class="w-3.5 h-3.5 text-cn-cyan"></i>
+                                        Control de Consumo vs. Presupuesto Teórico (BOM)
+                                    </span>
+                                    <span class="text-[10px] text-cn-green font-mono">En Tolerancia</span>
                                 </div>
-                                <div class="flex items-center justify-between text-slate-300 pt-1">
+                                <div>
+                                    <div class="flex justify-between text-[10px] text-slate-400 mb-1">
+                                        <span id="coConsumo1Nom">Cemento Portland: 570 de 840 bolsas</span>
+                                        <span id="coConsumo1Pct" class="text-emerald-400 font-bold">67.8% consumido</span>
+                                    </div>
+                                    <div class="w-full h-1.5 bg-slate-950 rounded-full overflow-hidden">
+                                        <div id="coConsumo1Bar" style="width: 67.8%;" class="h-full bg-gradient-to-r from-emerald-500 to-cn-green rounded-full transition-all duration-500"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-[10px] text-slate-400 mb-1">
+                                        <span id="coConsumo2Nom">Acero ADN-420: 1.550 de 2.150 kg</span>
+                                        <span id="coConsumo2Pct" class="text-cn-cyan font-bold">72.0% despachado</span>
+                                    </div>
+                                    <div class="w-full h-1.5 bg-slate-950 rounded-full overflow-hidden">
+                                        <div id="coConsumo2Bar" style="width: 72%;" class="h-full bg-gradient-to-r from-blue-500 to-cn-cyan rounded-full transition-all duration-500"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Registro de Vales de Salida & Remitos en Tiempo Real -->
+                            <div class="space-y-2 bg-slate-900/70 p-3 rounded-xl border border-white/[0.06] text-[11px]">
+                                <div class="text-[10px] uppercase tracking-wider text-slate-500 pb-1 border-b border-white/[0.05] flex justify-between">
+                                    <span>Últimos Vales de Despacho & Movimientos</span>
+                                    <span>Auditoría de Obrador</span>
+                                </div>
+                                <div class="flex items-center justify-between text-slate-300 pt-0.5">
                                     <span class="flex items-center gap-2">
                                         <span class="w-2 h-2 rounded-full bg-cn-green"></span>
-                                        <span>Venta #1042</span>
+                                        <span id="coMov1Text">Vale #142 — Cuadrilla Hormigón (40 bolsas cemento + hierros)</span>
                                     </span>
-                                    <span class="text-cn-green font-bold">+$18.500</span>
+                                    <span class="text-cn-green font-bold" id="coMov1Tag">Despachado</span>
                                 </div>
-                                <div class="flex items-center justify-between text-slate-300 pt-1">
+                                <div class="flex items-center justify-between text-slate-300 pt-0.5">
                                     <span class="flex items-center gap-2">
-                                        <span class="w-2 h-2 rounded-full bg-red-400"></span>
-                                        <span>Factura Proveedor #890</span>
+                                        <span class="w-2 h-2 rounded-full bg-cn-cyan"></span>
+                                        <span id="coMov2Text">Remito Acopio #889 — Corralón San Martín (+15 m³ Arena)</span>
                                     </span>
-                                    <span class="text-red-400 font-bold">-$94.000</span>
+                                    <span class="text-cn-cyan font-bold" id="coMov2Tag">Ingreso Acopio</span>
                                 </div>
                             </div>
 
                             <!-- Pie del Mockup -->
                             <div class="flex items-center justify-between text-slate-400 text-[11px] pt-1 border-t border-white/[0.05]">
-                                <span class="flex items-center gap-1.5">
-                                    <i data-lucide="shield" class="w-3.5 h-3.5 text-cn-green"></i>
-                                    <span>Arqueos de caja ciega, inventario y cuentas a pagar.</span>
+                                <span class="flex items-center gap-1.5 text-emerald-400">
+                                    <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+                                    <span>Control de mermas, acopios y rendición de caja chica.</span>
                                 </span>
-                                <span class="text-slate-500 hidden sm:inline">v2.4 POS</span>
+                                <span class="text-slate-500 hidden sm:inline">v1.2 PRO</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Descripción Caja Stock -->
-                <div class="lg:col-span-5 order-1 lg:order-2 space-y-6">
+                <!-- Descripción CN_ControlObra -->
+                <div class="lg:col-span-5 order-1 lg:order-2 space-y-5">
                     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/60 border border-emerald-500/30 text-xs font-mono text-emerald-400">
-                        <i data-lucide="bar-chart-3" class="w-3.5 h-3.5"></i>
-                        <span>Gestión Comercial y Operativa</span>
+                        <i data-lucide="clipboard-check" class="w-3.5 h-3.5"></i>
+                        <span>Control Operativo & Trazabilidad de Obra</span>
                     </div>
-                    <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight">
-                        Caja Stock
-                    </h2>
-                    <p class="text-base text-slate-300 leading-relaxed">
-                        Control total de compras, existencias de inventario, caja diaria y cuentas de proveedores para pymes, distribuidores y comercios.
+
+                    <div class="flex items-center gap-4">
+                        <div class="relative shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500/20 via-slate-900 to-emerald-950/80 border border-emerald-500/50 shadow-xl glow-green flex items-center justify-center">
+                            <i data-lucide="hard-hat" class="w-8 h-8 text-cn-green"></i>
+                            <span class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-cn-green border-2 border-cn-dark"></span>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2.5">
+                                <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight">
+                                    CN_ControlObra
+                                </h2>
+                                <span class="px-2 py-0.5 rounded bg-emerald-500/15 border border-emerald-500/30 text-[10px] font-mono text-emerald-400 font-semibold">v1.2 PRO</span>
+                            </div>
+                            <span class="text-xs font-mono text-emerald-400/90 block mt-0.5">Obrador • Acopios • Vales de Salida • Caja Chica</span>
+                        </div>
+                    </div>
+
+                    <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+                        Control total en el terreno para directores de obra, constructoras y contratistas. Conecta la planificación de <strong class="text-white">CN_Presupuestos</strong> con la ejecución física: gestiona existencias de obrador, audita acopios en corralones, emite vales de entrega a cuadrillas y liquida gastos diarios de caja chica.
                     </p>
 
-                    <ul class="space-y-3.5 text-sm text-slate-300 pt-1">
-                        <li class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.02] border border-white/[0.05]">
-                            <i data-lucide="check-circle-2" class="w-5 h-5 text-cn-green shrink-0 mt-0.5"></i>
-                            <span>Arqueos y caja ciega para evitar diferencias de efectivo.</span>
-                        </li>
-                        <li class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.02] border border-white/[0.05]">
-                            <i data-lucide="check-circle-2" class="w-5 h-5 text-cn-green shrink-0 mt-0.5"></i>
-                            <span>Alertas de stock crítico y órdenes de reposición.</span>
-                        </li>
-                        <li class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.02] border border-white/[0.05]">
-                            <i data-lucide="check-circle-2" class="w-5 h-5 text-cn-green shrink-0 mt-0.5"></i>
-                            <span>Registro detallado de deudas y pagos a proveedores.</span>
-                        </li>
-                    </ul>
+                    <!-- Matriz de Especificaciones 2x2 -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                        <div class="p-3.5 rounded-xl surface-card border border-white/[0.07] hover:border-emerald-400/40 transition-colors">
+                            <div class="flex items-center gap-2 text-cn-green font-bold text-xs font-mono">
+                                <i data-lucide="boxes" class="w-4 h-4"></i>
+                                <span>Depósito & Obrador</span>
+                            </div>
+                            <div class="text-xs text-slate-400 mt-1.5 leading-relaxed">Stock en unidades reales (bolsas, m³, kilos, barras $\phi 6$ a $\phi 25$) y control de herramientas.</div>
+                        </div>
+                        <div class="p-3.5 rounded-xl surface-card border border-white/[0.07] hover:border-emerald-400/40 transition-colors">
+                            <div class="flex items-center gap-2 text-cn-green font-bold text-xs font-mono">
+                                <i data-lucide="receipt" class="w-4 h-4"></i>
+                                <span>Vales a Cuadrillas</span>
+                            </div>
+                            <div class="text-xs text-slate-400 mt-1.5 leading-relaxed">Despacho ágil por frente de trabajo con comprobante digital e impacto automático de stock.</div>
+                        </div>
+                        <div class="p-3.5 rounded-xl surface-card border border-white/[0.07] hover:border-emerald-400/40 transition-colors">
+                            <div class="flex items-center gap-2 text-cn-green font-bold text-xs font-mono">
+                                <i data-lucide="truck" class="w-4 h-4"></i>
+                                <span>Acopios en Corralón</span>
+                            </div>
+                            <div class="text-xs text-slate-400 mt-1.5 leading-relaxed">Seguimiento de compras anticipadas pendientes de retiro y cuentas de proveedores.</div>
+                        </div>
+                        <div class="p-3.5 rounded-xl surface-card border border-white/[0.07] hover:border-emerald-400/40 transition-colors">
+                            <div class="flex items-center gap-2 text-cn-green font-bold text-xs font-mono">
+                                <i data-lucide="wallet" class="w-4 h-4"></i>
+                                <span>Caja Chica & Fondos</span>
+                            </div>
+                            <div class="text-xs text-slate-400 mt-1.5 leading-relaxed">Rendición de tickets de ferretería, fletes y viáticos con arqueos y conciliación bancaria.</div>
+                        </div>
+                    </div>
 
-                    <div class="flex items-center gap-4 pt-2">
-                        <a href="#contacto" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-cn-green hover:bg-emerald-500 font-semibold text-slate-950 text-sm transition-all shadow-lg glow-green hover:-translate-y-0.5">
-                            <span>Conocer Caja Stock</span>
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <a href="#contacto" onclick="document.getElementById('formArea').value='Software CN_ControlObra (Gestión de Obrador & Control de Obra)';" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-cn-green hover:bg-emerald-500 font-semibold text-slate-950 text-sm transition-all shadow-lg glow-green hover:-translate-y-0.5">
+                            <span>Solicitar CN_ControlObra</span>
                             <i data-lucide="arrow-up-right" class="w-4 h-4 stroke-[2.2]"></i>
                         </a>
+                        <span class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400">
+                            <i data-lucide="shield-check" class="w-3.5 h-3.5 text-cn-green"></i>
+                            Trazabilidad física y financiera
+                        </span>
                     </div>
                 </div>
 
@@ -1148,7 +1243,7 @@
                 Comunicate con CN Ingeniería
             </h2>
             <p class="mt-3 text-slate-300 text-base sm:text-lg max-w-2xl mx-auto">
-                Cotizá tu proyecto de cálculo estructural e instalaciones, solicitá una demo de <strong class="text-white">CN_STRUCT_3D</strong>, probá <strong class="text-amber-400">CN_Presupuestos</strong> o consultá por <strong class="text-white">Caja Stock</strong>.
+                Cotizá tu proyecto de cálculo estructural e instalaciones, solicitá una demo de <strong class="text-white">CN_STRUCT_3D</strong>, probá <strong class="text-amber-400">CN_Presupuestos</strong> o coordiná la gestión de obrador con <strong class="text-cn-green">CN_ControlObra</strong>.
             </p>
 
             <!-- Tarjeta Visual Destacada de Correo Institucional -->
@@ -1191,7 +1286,7 @@
                         <option value="Consultoría / Peritaje de Obras Mayores">Consultoría de Obras de Gran Envergadura / Peritaje</option>
                         <option value="Software CN_STRUCT_3D (Demo / Licencia)">Software CN_STRUCT_3D (Demo / Licencia)</option>
                         <option value="Software CN_Presupuestos (Cómputo & Presupuestos de Obra)">Software CN_Presupuestos (Cómputo & Presupuestos de Obra)</option>
-                        <option value="Software Caja Stock (Gestión Comercial)">Software Caja Stock (Gestión Comercial)</option>
+                        <option value="Software CN_ControlObra (Gestión de Obrador & Control de Obra)">Software CN_ControlObra (Gestión de Obrador & Control de Obra)</option>
                     </select>
                 </div>
                 <div class="sm:col-span-2">
@@ -1233,7 +1328,7 @@
                 <span>•</span>
                 <a href="#cn-presupuestos" class="hover:text-amber-400 transition-colors">CN_Presupuestos</a>
                 <span>•</span>
-                <a href="#caja-stock" class="hover:text-cn-green transition-colors">Caja Stock</a>
+                <a href="#cn-control-obra" class="hover:text-cn-green transition-colors">CN_ControlObra</a>
             </div>
         </div>
     </footer>
@@ -1394,6 +1489,95 @@
 
         // Inicializar datos del simulador
         renderPresupuestoSimulator();
+
+        /* -------------------------------------------------------------
+           LÓGICA DEL MOCKUP INTERACTIVO: CN_CONTROLOBRA
+        ------------------------------------------------------------- */
+        const CN_CONTROLOBRA_DATA = {
+            frente1: {
+                obrador: '340 bolsas',
+                acopio: '500 bolsas',
+                vales: '6 vales',
+                caja: 'Conciliada',
+                consumo1Nom: 'Cemento Portland: 570 de 840 bolsas',
+                consumo1Pct: '67.8% consumido',
+                consumo1Width: '67.8%',
+                consumo2Nom: 'Acero ADN-420: 1.550 de 2.150 kg',
+                consumo2Pct: '72.0% despachado',
+                consumo2Width: '72%',
+                mov1Text: 'Vale #142 — Cuadrilla Hormigón (40 bolsas cemento + hierros)',
+                mov1Tag: 'Despachado',
+                mov2Text: 'Remito Acopio #889 — Corralón San Martín (+15 m³ Arena)',
+                mov2Tag: 'Ingreso Acopio'
+            },
+            frente2: {
+                obrador: '4.200 un.',
+                acopio: '8.500 un.',
+                vales: '9 vales',
+                caja: 'Conciliada',
+                consumo1Nom: 'Ladrillos Huecos 12x18x33: 3.260 de 6.800 un.',
+                consumo1Pct: '47.9% en obra',
+                consumo1Width: '47.9%',
+                consumo2Nom: 'Cal Hidratada & Cemento: 210 de 380 bolsas',
+                consumo2Pct: '55.2% consumido',
+                consumo2Width: '55.2%',
+                mov1Text: 'Vale #144 — Cuadrilla Mampostería (1.200 ladrillos + 15 cal)',
+                mov1Tag: 'Despachado',
+                mov2Text: 'Vale #145 — Cuadrilla Yesería (40 bolsas revoque fino)',
+                mov2Tag: 'Despachado'
+            },
+            acopios: {
+                obrador: '85 tn mat.',
+                acopio: '140 tn pend.',
+                vales: '14 remitos',
+                caja: 'Auditada',
+                consumo1Nom: 'Hormigón H-21 Elaborado: 42 de 60 m³ acopiados',
+                consumo1Pct: '70.0% contratado',
+                consumo1Width: '70%',
+                consumo2Nom: 'Mallas Electrosoldadas: 180 de 240 m² entregadas',
+                consumo2Pct: '75.0% retirado',
+                consumo2Width: '75%',
+                mov1Text: 'Remito Corralón #902 — Entrega en obra 30 m³ H-21 tolva',
+                mov1Tag: 'Entrega en Obra',
+                mov2Text: 'Orden Retiro #412 — Cantera La Toma (+28 tn ripio lavado)',
+                mov2Tag: 'Orden Retiro'
+            }
+        };
+
+        function selectObraFrente(frente) {
+            ['frente1', 'frente2', 'acopios'].forEach(f => {
+                const btn = document.getElementById('tabObra-' + f);
+                if (btn) {
+                    if (f === frente) {
+                        btn.className = 'obra-tab-btn active px-2 py-1.5 rounded-lg text-left transition-all border border-emerald-500/60 bg-emerald-500/15 text-white shadow-sm';
+                    } else {
+                        btn.className = 'obra-tab-btn px-2 py-1.5 rounded-lg text-left transition-all border border-white/5 bg-slate-900/80 text-slate-300 hover:border-emerald-400/40';
+                    }
+                }
+            });
+
+            const data = CN_CONTROLOBRA_DATA[frente];
+            if (!data) return;
+
+            document.getElementById('coKpiObrador').innerText = data.obrador;
+            document.getElementById('coKpiAcopio').innerText = data.acopio;
+            document.getElementById('coKpiVales').innerText = data.vales;
+            document.getElementById('coKpiCaja').innerText = data.caja;
+
+            document.getElementById('coConsumo1Nom').innerText = data.consumo1Nom;
+            document.getElementById('coConsumo1Pct').innerText = data.consumo1Pct;
+            document.getElementById('coConsumo1Bar').style.width = data.consumo1Width;
+
+            document.getElementById('coConsumo2Nom').innerText = data.consumo2Nom;
+            document.getElementById('coConsumo2Pct').innerText = data.consumo2Pct;
+            document.getElementById('coConsumo2Bar').style.width = data.consumo2Width;
+
+            document.getElementById('coMov1Text').innerText = data.mov1Text;
+            document.getElementById('coMov1Tag').innerText = data.mov1Tag;
+            document.getElementById('coMov2Text').innerText = data.mov2Text;
+            document.getElementById('coMov2Tag').innerText = data.mov2Tag;
+        }
+
         lucide.createIcons();
     </script>
 
